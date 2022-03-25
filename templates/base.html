@@ -40,13 +40,14 @@
     <div class="message-container"></div>
     {% endif %}
 
-    <main>
-        <h1>KUPPA</h1>
-    </main>
+    {% block page_header %}
+    {% endblock %}
 
-    <footer>
-
-    </footer>
+    {% block content %}
+    {% endblock %}
+    
+    {% block postloadjs %}
+    {% endblock %}
 
 </body>
 
