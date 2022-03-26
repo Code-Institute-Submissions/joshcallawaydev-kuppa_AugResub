@@ -1,5 +1,56 @@
 {% extends "base.html" %}
 {% load static %}
+
+
+
+{% block page_header %}
+<div class="container head-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">KUPPA</h1>
+<div class="container main">
+    <div class="row">
+        <div class="col text-center mx-3 py-5 col-md-auto">
+            <h1 class="display-1 logo-font text-brown">
+                Level up your coffee game...
+            </h1>
+            <div class="mt-5">
+                <h4>
+                    <a href="" role="button" class="shop-now-button btn btn-lg text-uppercase px-3 py-3">Shop Now</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-5 w-100" style="height: 1000px; background-color: #804102;">
+    <div class="row py-5">
+        <div class="col text-center mx-3 my-auto col-md-6">
+            <h1 class="display-2 logo-font text-white px-5">
+                More than coffee
+            </h1>
+        </div>
+    </div>
+    <div class="row mt-5 pb-5">
+        <div class="col text-center mx-3 my-auto col-md-6">
+            <p class="display-6 text-white pb-5 px-5">
+                Here at KUPPA we understand that coffee is more than just a beverage. It's a way of life...
+            </p>
+            <div class="mt-5">
+                <h4>
+                    <a href="" role="button" class="shop-now-button btn btn-lg text-uppercase px-3 py-3">Learn More</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <section class="col px-5 py-5">
+            <img src="/media/coffee_2.jpg" alt="sack of coffee and cup of coffe on table" width="220" height="220">
+        </section>
+    </div>
+</div>
 {% endblock %}
