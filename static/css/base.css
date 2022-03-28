@@ -9,13 +9,13 @@ body {
 }
 
 .main {
-    background: url('/media/hero_image.jpg') no-repeat center center fixed;
+    background: url('/media/hero_image.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
+    min-height: 1050px;
     padding: 200px 30px 0;
-    width: 100%;
     margin: 0;
-
+    min-width: 100%;
 }
 
 /* Bulma */
@@ -65,6 +65,17 @@ body {
 
 .banner-colour {
     background-color: #804102;
+}
+
+.learn-more-background {
+    background-color: #804102;
+}
+
+.footer-background {
+    background: url('/media/coffee_12.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 300px;
+    min-width: 100%;
 }
 
 /* -------------------------------- Media Queries */
