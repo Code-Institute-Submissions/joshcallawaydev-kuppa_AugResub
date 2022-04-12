@@ -1,0 +1,14 @@
+[{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp001",
+        "name": "Booshy",
+        "description": "Our signature blend. A full bodied medium roast with hints of milk chocolate and Hazelnut. Good both with or without milk. Not one to be ignored.",
+        "price": 8.99,
+        "category": 1,
+        "rating": 4.9,
+        "image_url": "",
+        "image": ""
+    }
+}]
