@@ -3,12 +3,155 @@
     "model": "products.product",
     "fields": {
         "sku": "pp001",
-        "name": "Booshy",
+        "name": "Callax",
         "description": "Our signature blend. A full bodied medium roast with hints of milk chocolate and Hazelnut. Good both with or without milk. Not one to be ignored.",
         "price": 8.99,
         "category": 1,
         "rating": 4.9,
         "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
         "image": "coffee_product.png"
+    }
+}, {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp002",
+        "name": "Draco",
+        "description": "A delicious blend. Full bodied medium roast with hints of cocoa and figs. Made for milk but loved by purists.",
+        "price": 9.99,
+        "category": 1,
+        "rating": 4.7,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp003",
+        "name": "Mayan",
+        "description": "Originating from Guatemala. This single origin is full bodied and bursting with flavour. Enjoy black for hints of Nougat and cocoa",
+        "price": 10.49,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp004",
+        "name": "Parque",
+        "description": "Originating from Guatemala. This single origin is a medium roast and full with flavour. Enjoy black for hints of tangerine and hazelnut or with milk for hints of cocoa. Delicious!",
+        "price": 9.99,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp005",
+        "name": "Jose",
+        "description": "Originating from Costa Rica. This single origin is a medium roast and full of flavour. Enjoy black for hints of zucchini or with milk for hints of cocoa and blackberry. Yum!",
+        "price": 10.99,
+        "category": 3,
+        "rating": 4.9,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp006",
+        "name": "Cartago",
+        "description": "Originating from Costa Rica. This single origin is a dark roast and packed with flavour. Enjoy black for hints of cocoa or with milk for hints of cocoa and vanilla.",
+        "price": 11.99,
+        "category": 3,
+        "rating": 4.7,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp007",
+        "name": "Zorba",
+        "description": "Originating from Costa Rica. This single origin is a medium roast and packed with flavour. Enjoy black for hints of cocoa and mint or with milk for hints of cocoa and toffee.",
+        "price": 12.99,
+        "category": 3,
+        "rating": 4.2,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp008",
+        "name": "Zilla",
+        "description": "A delicious blend. A full bodied medium roast with hints of dark chocolate. Good both with or without milk. Not one to be ignored.",
+        "price": 9.49,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp009",
+        "name": "Dela",
+        "description": "A delicious blend. Medium roast with hints of cocoa and caramel. Made for milk but enjoyed without.",
+        "price": 9.99,
+        "category": 1,
+        "rating": 4.4,
+        "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+        "image": "coffee_product.png"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp010",
+        "name": "Reusable Cup (Bamboo)",
+        "description": "",
+        "price": 8.99,
+        "category": 4,
+        "rating": 4.2,
+        "image_url": "https://cdn.shopify.com/s/files/1/0196/2708/1828/products/Nought_bamboo_reusable_coffee_cup_with_lid_900x.jpg?v=1566416632",
+        "image": "bamboo_cup.png"
+    }
+}, {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp011",
+        "name": "KeepCup Special Edition Glass 12oz",
+        "description": "Reusable cup for all your coffee needs",
+        "price": 19.99,
+        "category": 4,
+        "rating": 4.3,
+        "image_url": "https://cdn.shopify.com/s/files/1/0051/0417/3144/products/12oz_KeepCup_brew_glass_1500x.jpg?v=1643387103",
+        "image": "keep_cup.png"
+    }
+}, {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp012",
+        "name": "Sage Barista Touch",
+        "description": "The all in one coffee machine for enthusiasts",
+        "price": 8.99,
+        "category": 5,
+        "rating": 4.0,
+        "image_url": "https://www.sageappliances.com/content/dam/sage/uk/assets/espresso/finished-goods/bes880/ses880bss2guk1/images/pdp0.jpg.transform/breville-lrg/image.jpg",
+        "image": "sagebaristatouch.png"
     }
 }]
