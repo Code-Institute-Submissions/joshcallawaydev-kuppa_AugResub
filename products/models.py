@@ -10,6 +10,13 @@ class Category(models.Model):
     """
     categories class
     """
+
+    class Meta:
+        """
+        docstring
+        """
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=250)
     friendly_name = models.CharField(max_length=250, null=True, blank=True)
 

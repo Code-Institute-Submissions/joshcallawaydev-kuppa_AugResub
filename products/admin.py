@@ -4,6 +4,31 @@ admin module
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
-admin.site.register(Product)
-admin.site.register(Category)
+
+class CategoryAdmin(admin.ModelAdmin):
+    """
+    docstring
+    """
+    list_display = (
+        'name',
+        'friendly_name',
+    )
+
+
+class ProductAdmin(admin.ModelAdmin):
+    """
+    docstring
+    """
+    list_display = (
+        'name',
+        'category',
+        'price',
+        'sku',
+        'rating',
+        'image',
+    )
+    ordering = ('sku',)
+
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
