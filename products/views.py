@@ -9,8 +9,9 @@ def all_products(request):
     """
 
     all_products = Product.objects.all()
+    print(all_products)
     context = {
-        'products': all_products,
+        'all_products': all_products,
     }
 
-    return render(request, 'products/all_products.html', context)
+    return render(request, 'all_products/all_products.html', context)
