@@ -71,6 +71,19 @@ body {
     background-color: #804102;
 }
 
+.products_container {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.title-container {
+    margin-top: 8rem;
+}
+
+.product_container {
+    margin: 0 2rem 0;
+}
+
 .footer-background {
     background: url('/media/coffee_12.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -78,12 +91,12 @@ body {
     min-width: 100%;
 }
 
-/* -------------------------------- Media Queries */
+/* ------- Media Queries ------- */
 
 /* larger container on xl viewports */
 @media (min-width: 1200px) {
     .container {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 

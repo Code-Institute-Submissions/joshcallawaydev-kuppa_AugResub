@@ -13,10 +13,73 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {{ all_products }}
+<div class="products_container">
+    <hr>
+    <div class="row title-container">
+        <section class="col my-5 text-center">
+            <h1 class="logo-font">All Products</h1>
+        </section>
+    </div>
+    <div class="row product_container">
+        <div class="product-container col-10 offset-1">
+            <div class="row">
+                {% for product in all_products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="h-100 card border-0">
+                        {% if product.image %}
+                        <a href="">
+                            <img class="img-fluid card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="img-fluid card-img-top" src="{{ MEDIA_URL }}noimage.jpeg"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white text-left pt-0 border-0">
+                            <div class="row">
+                                <section class="col">
+                                    <p class="lead text-left mb-0 font-weight-bold">£{{ product.price }}</p>
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star"></i> {{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    <br>
+                                    {% if product.category.name %}
+                                    <small class="text-muted"><i class="fa-solid fa-tag"></i> {{ product.category.name }}</small>
+                                    {% endif %}
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
