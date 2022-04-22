@@ -93,6 +93,17 @@ body {
 
 /* ------- Media Queries ------- */
 
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+
 /* larger container on xl viewports */
 @media (min-width: 1200px) {
     .container {

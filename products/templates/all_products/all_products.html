@@ -14,9 +14,8 @@
 {% block content %}
 
 <div class="products_container">
-    <hr>
     <div class="row title-container">
-        <section class="col my-5 text-center">
+        <section class="col mb-5 text-center">
             <h1 class="logo-font">All Products</h1>
         </section>
     </div>
@@ -27,11 +26,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="h-100 card border-0">
                         {% if product.image %}
-                        <a href="">
+                        <a href="{% url 'product_details' product.id %}">
                             <img class="img-fluid card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_details' product.id %}">
                             <img class="img-fluid card-img-top" src="{{ MEDIA_URL }}noimage.jpeg"
                                 alt="{{ product.name }}">
                         </a>
