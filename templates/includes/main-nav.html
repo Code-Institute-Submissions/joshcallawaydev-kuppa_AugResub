@@ -6,9 +6,9 @@
                 All
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -19,10 +19,10 @@
                 Coffee
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="Coffee-link">
-                <a href="" class="dropdown-item">Blends</a>
-                <a href="" class="dropdown-item">Guatemala</a>
-                <a href="" class="dropdown-item">Costa Rica</a>
-                <a href="" class="dropdown-item">All Coffee</a>
+                <a href="{% url 'products' %}?category=blends" class="dropdown-item">Blends</a>
+                <a href="{% url 'products' %}?category=guatemala" class="dropdown-item">Guatemala</a>
+                <a href="{% url 'products' %}?category=costa_rica" class="dropdown-item">Costa Rica</a>
+                <a href="{% url 'products' %}?category=blends,guatemala,costa_rica" class="dropdown-item">All Coffee</a>
             </div>
         </li>
 
@@ -32,9 +32,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item">Cups</a>
-                <a href="" class="dropdown-item">Machines</a>
-                <a href="" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=cups" class="dropdown-item">Cups</a>
+                <a href="{% url 'products' %}?category=machines" class="dropdown-item">Machines</a>
+                <a href="{% url 'products' %}?category=cups,machines" class="dropdown-item">All Homeware</a>
             </div>
         </li>
 
@@ -44,9 +44,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Great Deals</a>
-                <a href="" class="dropdown-item">All Offers</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=great_deals" class="dropdown-item">Great Deals</a>
+                <a href="{% url 'products' %}?category=new_arrivals,great_deals" class="dropdown-item">All Offers</a>
             </div>
         </li>
     </ul>
