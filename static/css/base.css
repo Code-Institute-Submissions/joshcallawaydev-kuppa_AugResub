@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -89,6 +90,19 @@ body {
     background-size: cover;
     height: 300px;
     min-width: 100%;
+}
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1rem 1rem;
+}
+
+.category-btn {
+    width: 8rem !important;
+    height: 2rem !important;
+    margin-top: 1rem;
 }
 
 /* ------- Media Queries ------- */

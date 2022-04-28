@@ -19,6 +19,17 @@
             <h1 class="logo-font">All Products</h1>
         </section>
     </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 btn-box justify-content-around">
+            {% for category in categories %}
+            <div class="category-btn">
+                <a class="btn btn-secondary" href="{% url 'products' %}?category={{ category.name }}"
+                    role="button">{{ category.friendly_name }}</a>
+            </div>
+            {% endfor %}
+            <a class="btn btn-secondary" href="{% url 'products' %}" role="button">All Products</a>
+        </div>
+    </div>
     <div class="row product_container">
         <div class="product-container col-10 offset-1">
             <div class="row">
@@ -50,7 +61,8 @@
                                     {% endif %}
                                     <br>
                                     {% if product.category.name %}
-                                    <small class="text-muted"><i class="fa-solid fa-tag"></i> {{ product.category.name }}</small>
+                                    <small class="text-muted"><i class="fa-solid fa-tag"></i>
+                                        {{ product.category.name }}</small>
                                     {% endif %}
                                 </section>
                             </div>
