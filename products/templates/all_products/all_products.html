@@ -13,25 +13,22 @@
 
 {% block content %}
 
-<div class="products_container">
+<div class="container-fluid">
     <div class="row title-container">
         <section class="col mb-5 text-center">
             <h1 class="logo-font">All Products</h1>
         </section>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 btn-box justify-content-around">
-            {% for category in categories %}
-            <div class="category-btn">
-                <a class="btn btn-secondary" href="{% url 'products' %}?category={{ category.name }}"
-                    role="button">{{ category.friendly_name }}</a>
-            </div>
-            {% endfor %}
-            <a class="btn btn-secondary" href="{% url 'products' %}" role="button">All Products</a>
+    <div class="row justify-content-center">
+        <div class="col-12 btn-box justify-content-around">
+            <a class="btn btn btn-outline-secondary" href="{% url 'products' %}" role="button">All Products</a>
+            <a class="btn btn btn-outline-secondary" href="{% url 'products' %}?category=blends,guatemala,costa_rica" role="button">Coffee</a>
+            <a class="btn btn btn-outline-secondary" href="{% url 'products' %}?category=cups,machines" role="button">Accessories</a>
+            <a class="btn btn btn-outline-secondary" href="{% url 'products' %}?category=new_arrivals,great_deals" role="button">Offers</a>
         </div>
     </div>
-    <div class="row product_container">
-        <div class="product-container col-10 offset-1">
+    <div class="row justify-content-center text-center">
+        <div class="">
             <div class="row">
                 {% for product in all_products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
