@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
+    'basket',
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.google',
@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'basket.contexts.basket_contents',
             ],
         },
     },
@@ -148,6 +149,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+# variables
+
+DELIVERY_PERCENTAGE = 10
+DELIVERY_THRESHOLD = 49
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

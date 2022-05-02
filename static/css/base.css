@@ -105,6 +105,10 @@ body {
     margin-top: 1rem;
 }
 
+.basket_container {
+    height: 90vh
+}
+
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {

@@ -105,7 +105,7 @@
                                     <br>
                                     {% if product.category.name %}
                                     <small class="text-muted"><i class="fa-solid fa-tag"></i>
-                                        {{ product.category.name }}</small>
+                                        {{ product.category.friendly_name }}</small>
                                     {% endif %}
                                 </section>
                             </div>
@@ -139,4 +139,39 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selection = $(this);
+
+        var siteUrl = new URL(window.location);
+
+        var selected = selection.val();
+
+        if (selected != "reset") {
+
+            var sorted = selected.split("_")[0];
+
+            var direction = selected.split("_")[1];
+
+            siteUrl.searchParams.set("sort", sorted);
+
+            siteUrl.searchParams.set("direction", direction);
+
+            window.location.replace(siteUrl);
+
+        } else {
+
+            siteUrl.searchParams.delete("sort");
+
+            siteUrl.searchParams.delete("direction");
+
+            window.location.replace(siteUrl);
+        }
+    })
+</script>
 {% endblock %}
