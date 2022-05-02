@@ -73,16 +73,11 @@ body {
 }
 
 .products_container {
-    width: 100%;
     min-height: 80vh;
 }
 
 .title-container {
     margin-top: 8rem;
-}
-
-.product_container {
-    margin: 0 2rem 0;
 }
 
 .footer-background {
