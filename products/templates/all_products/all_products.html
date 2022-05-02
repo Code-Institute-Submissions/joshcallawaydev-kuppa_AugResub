@@ -29,7 +29,8 @@
             <a class="btn btn-outline-secondary" href="{% url 'products' %}?category=new_arrivals,great_deals"
                 role="button">Offers</a> -->
             {% for cat in categories %}
-            <a href="{% url 'products' %}?category={{ cat.name }}" class="btn btn-outline-secondary mt-2" role="button">{{ cat.friendly_name }}</a>
+            <a href="{% url 'products' %}?category={{ cat.name }}" class="btn btn-outline-secondary mt-2"
+                role="button">{{ cat.friendly_name }}</a>
             {% endfor %}
         </div>
     </div>
@@ -72,6 +73,9 @@
         </div>
         <div class="">
             <div class="row">
+                {% if all_products|length == 0 %}
+                <p>No products available.</p>
+                {% else %}
                 {% for product in all_products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="h-100 card border-0">
@@ -129,6 +133,7 @@
                 </div>
                 {% endif %}
                 {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
