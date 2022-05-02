@@ -1,6 +1,8 @@
 """Context processor avaioable to all templates"""
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 
 def basket_contents(request):
@@ -12,6 +14,25 @@ def basket_contents(request):
     delivery = 0
     delivery_threshold = settings.DELIVERY_THRESHOLD
 
+    basket = request.session.get('basket', {})
+    print(basket)
+
+    for item_id, quantity in basket.items():
+        product = get_object_or_404(Product, pk=item_id)
+
+        total += quantity * product.price
+
+        product_count += quantity
+
+        basket_items.append({
+            'product': product,
+            'product_name': product.name,
+            'product_image': product.image,
+            'product_rating': product.rating,
+            'product_price': product.price,
+            'quantity': quantity,
+            'item_id': item_id,
+        })
 
     if total < delivery_threshold:
         delivery = total * Decimal(settings.DELIVERY_PERCENTAGE / 100)
