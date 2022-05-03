@@ -104,6 +104,11 @@ body {
     height: 90vh
 }
 
+.custom-img {
+    height: 4rem;
+    width: 4rem;
+}
+
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {

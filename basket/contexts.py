@@ -26,6 +26,7 @@ def basket_contents(request):
 
         basket_items.append({
             'product': product,
+            'product_description': product.description,
             'product_name': product.name,
             'product_image': product.image,
             'product_rating': product.rating,
