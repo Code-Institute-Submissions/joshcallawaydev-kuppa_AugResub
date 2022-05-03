@@ -27,7 +27,7 @@
                 {% for item in basket_items %}
                 <div class="row text-left border-bottom">
 
-                    <div class="col-3 col-md-2 d-flex align-items-center">
+                    <div class="col-2 col-md-2 d-flex align-items-center">
                         {% if item.product_image %}
                         <img class="img-thumbnail rounded float-left custom-img" src="{{ item.product_image.url }}"
                             alt="{{ item.product_name }}">
@@ -36,11 +36,11 @@
                             alt="{{ item.product_name }}">
                         {% endif %}
                     </div>
-                    <div class="col-6 col-md-8">
+                    <div class="col-8 col-md-8">
                         <p>{{ item.product_name }}</p>
                         <p>£{{ item.product_price }}</p>
                     </div>
-                    <div class="col-3 col-md-2 d-flex align-items-center">
+                    <div class="col-2 col-md-2 d-flex align-items-center">
                         <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}"
                             min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                     </div>
