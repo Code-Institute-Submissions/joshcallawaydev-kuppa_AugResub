@@ -58,9 +58,14 @@
     <div class="row mt-3">
         <div class="col-12">
             <div class="container-fluid text-left">
-                <p class="m-0">Total: {{ total }}</p>
-                <p class="m-0">Delivery: {{ delivery }}</p>
-                <p class="m-0">Grand Total (inc delivery): {{ grand_total }}</p>
+                <p class="m-0">Total: {{ total|floatformat:2 }}</p>
+                {% if delivery == 0 %}
+                <p class="m-0">Delivery: {{ delivery|floatformat:2 }}</p>
+                <p class="m-0">Congratulations, you have triggered FREE delivery!</p>
+                {% else %}
+                <p class="m-0">Delivery: {{ delivery|floatformat:2 }}</p>
+                {% endif %}
+                <p class="m-0">Grand Total (inc delivery): {{ grand_total|floatformat:2 }}</p>
             </div>
         </div>
     </div>

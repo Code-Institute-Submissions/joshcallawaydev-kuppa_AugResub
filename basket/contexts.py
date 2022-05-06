@@ -31,7 +31,7 @@ def basket_contents(request):
             'product_image': product.image,
             'product_rating': product.rating,
             'product_price': product.price,
-            'quantity': quantity,
+            'quantity': int(quantity),
             'item_id': item_id,
         })
 
