@@ -23,48 +23,54 @@
     <div class="row">
         <div class="col-12">
             {% if basket_items %}
-            <div class="container-fluid text-left m-0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
                 {% for item in basket_items %}
-                <div class="row text-left border-bottom">
-
-                    <div class="col-2 col-md-2 d-flex align-items-center my-2">
-                        {% if item.product_image %}
-                        <img class="img-thumbnail rounded float-left custom-img" src="{{ item.product_image.url }}"
-                            alt="{{ item.product_name }}">
-                        {% else %}
-                        <img class="img-thumbnail rounded float-left custom-img" src="{{ MEDIA_URL }}noimage.jpeg"
-                            alt="{{ item.product_name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-6 col-md-6 d-flex align-items-center">
-                        <p>{{ item.product_name }}</p>
-                    </div>
-                    <div class="col-2 d-flex align-items-center">
-                        <p>£{{ item.product_price }}</p>
-                    </div>
-                    <div class="col-2 col-md-2 d-flex align-items-center">
-                        <p>Qty: {{ item.quantity }}</p>
-                    </div>
-                    </row>
-                </div>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="align-items-center custom-img">
+                                {% if item.product_image %}
+                                <img class="img-thumbnail rounded" src="{{ item.product_image.url }}"
+                                    alt="{{ item.product_name }}">
+                                {% else %}
+                                <img class="img-thumbnail rounded" src="{{ MEDIA_URL }}noimage.jpeg"
+                                    alt="{{ item.product_name }}">
+                                {% endif %}
+                            </div>
+                        </th>
+                        <td class="align-items-center">{{ item.product_name }}</td>
+                        <td>{{ item.product_price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td><a href="{% url 'remove_item' item.item_id %}"
+                                class="mb-3 text-brown text-decoration-none text-uppercase" role="button"><i
+                                    class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
                 {% endfor %}
-                {% else %}
-                <p class="mt-3">Your basket is currently empty</p>
-                <a href="{% url 'products' %}" class="text-black text-decoration-none text-uppercase" role="button"><i
-                        class="fa-solid fa-circle-chevron-left"></i> Keep Shopping</a>
-                {% endif %}
-            </div>
+            </table>
+            {% else %}
+            <p class="mt-3">Your basket is currently empty</p>
+            <a href="{% url 'products' %}" class="btn btn-kuppa text-decoration-none text-uppercase" role="button"><i
+                    class="fa-solid fa-circle-chevron-left"></i> Keep Shopping</a>
+            {% endif %}
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             <div class="container-fluid text-center">
                 <div class="col-12 d-flex align-items-center mb-4">
-                    <a href="{% url 'products' %}"
-                        class="mt-3 mr-3 btn btn-outline-secondary text-brown text-decoration-none text-uppercase"
+                    <a href="{% url 'products' %}" class="mt-3 mr-3 btn btn-kuppa text-decoration-none text-uppercase"
                         role="button"><i class="fa-solid fa-circle-chevron-left"></i> Keep Shopping</a>
-                    <a href=""
-                        class="mt-3 mx-3 btn btn-outline-secondary text-brown text-decoration-none text-uppercase"
+                    <a href="" class="mt-3 mx-3 btn btn-kuppa text-decoration-none text-uppercase"
                         role="button">Checkout</a>
                 </div>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">

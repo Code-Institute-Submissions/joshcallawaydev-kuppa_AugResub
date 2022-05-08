@@ -24,3 +24,24 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+
+def remove_item(request, item_id):
+    """remove item from basket"""
+
+    item = item_id
+    # print(item)
+
+    basket = request.session['basket']
+    # print(basket)
+
+    if item in basket:
+        basket[item] -= 1
+        if basket[item] == 0:
+            basket.pop(item)
+
+    request.session['basket'] = basket
+
+    print(basket)
+
+    return render(request, 'basket/basket.html')

@@ -42,7 +42,6 @@ def basket_contents(request):
 
     grand_total = total + delivery
 
-    # empty dict
     context = {
         'basket_items': basket_items,
         'grand_total': grand_total,
