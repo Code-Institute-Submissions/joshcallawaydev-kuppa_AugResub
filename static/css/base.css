@@ -111,7 +111,7 @@ body {
 }
 
 .basket_container {
-    height: 90vh
+    min-height: 90vh
 }
 
 .custom-img {

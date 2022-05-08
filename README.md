@@ -9,3 +9,7 @@ This is for demonstation purposes only and will be used for my final Code Instit
 1) Debug currently set to TRUE
 2) add social media login to installed apps via `https://django-allauth.readthedocs.io/en/latest/installation.html`
 3) Issue binding port - Authentication and Authorisation functionality - test once deployed
+
+## Future features
+
+1) add option for changing coffee bag sizes
