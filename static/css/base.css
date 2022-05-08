@@ -119,6 +119,17 @@ body {
     width: 6rem;
 }
 
+.message-container {
+    position: fixed;
+    z-index: 9999999;
+    top: 7rem;
+    right: 1rem;
+}
+
+.kuppa-toast {
+    overflow: visible;
+}
+
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {

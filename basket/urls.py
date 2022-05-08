@@ -6,5 +6,5 @@ from . import views
 urlpatterns = [
     path('', views.view_basket, name='view_basket'),
     path('add/<item_id>/', views.add_to_basket, name='add_to_basket'),
-    path('remove/<item_id>/', views.remove_item, name='remove_item')
+    path('change_qty/<item_id>/', views.change_qty, name='change_qty')
 ]

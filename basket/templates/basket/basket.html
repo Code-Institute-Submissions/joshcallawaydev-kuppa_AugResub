@@ -30,7 +30,6 @@
                         <th scope="col">Description</th>
                         <th scope="col">Price</th>
                         <th scope="col">Qty</th>
-                        <th scope="col"></th>
                     </tr>
                 </thead>
                 {% for item in basket_items %}
@@ -49,10 +48,17 @@
                         </th>
                         <td class="align-items-center">{{ item.product_name }}</td>
                         <td>{{ item.product_price }}</td>
-                        <td>{{ item.quantity }}</td>
-                        <td><a href="{% url 'remove_item' item.item_id %}"
-                                class="mb-3 text-brown text-decoration-none text-uppercase" role="button"><i
-                                    class="fa-solid fa-trash"></i></a></td>
+                        <!-- <td>{{ item.quantity }}</td> -->
+                        <td>
+                            <form class="form d-flex align-items-center justify-content-between" action="{% url 'change_qty' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <div class="input-group w-75 m-0">
+                                    <input class="form-control" type="number" name="quantity"
+                                        value="{{ item.quantity }}" min="0" max="99">
+                                </div>
+                                <button type="submit" class="btn btn-link btn-sm text-brown text-decoration-none text-uppercase">Update</button>
+                            </form>
+                        </td>
                     </tr>
                 </tbody>
                 {% endfor %}
