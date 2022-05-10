@@ -1,5 +1,5 @@
 """Basket module views"""
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
 
@@ -41,12 +41,17 @@ def change_qty(request, item_id):
     basket = request.session['basket']
     # print(basket)
 
-    if item in basket:
-        basket[item] = quantity
-        messages.success(request, f'Quantity updated to {quantity}')
-        if basket[item] == 0:
-            basket.pop(item)
-            messages.info(request, 'Item removed')
+    try:
+        if item in basket:
+            basket[item] = quantity
+            messages.success(request, f'Quantity updated to {quantity}')
+            if basket[item] == 0:
+                basket.pop(item)
+                messages.info(request, 'Item removed')
+
+    except Exception as e:
+        messages.error(request, f'{e} occured during your last action for {item}')
+        return HttpResponse(status=500)
 
     request.session['basket'] = basket
 
