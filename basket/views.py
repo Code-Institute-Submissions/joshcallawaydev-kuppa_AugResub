@@ -1,5 +1,5 @@
 """Basket module views"""
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from products.models import Product
 
@@ -14,7 +14,7 @@ def add_to_basket(request, item_id):
     """Addaquantity of the specified product to the shopping bag"""
 
     redirect_url = request.POST.get('redirect_url')
-    item = Product.objects.get(id=item_id)
+    item = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
 
     basket = request.session.get('basket', {})
