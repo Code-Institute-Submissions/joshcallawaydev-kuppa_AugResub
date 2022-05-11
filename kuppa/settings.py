@@ -45,13 +45,16 @@ INSTALLED_APPS = [
     'home',
     'products',
     'basket',
+    'crispy_forms',
     'checkout',
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.instagram',
-
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +83,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'basket.contexts.basket_contents',
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },
