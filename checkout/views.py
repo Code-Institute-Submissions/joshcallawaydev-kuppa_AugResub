@@ -17,7 +17,5 @@ def checkout(request):
     order_form = OrderForm()
     print(order_form)
 
-    template = "checkout/checkout.html"
-
     context = {'order_form': order_form}
-    return render(request, template, context)
+    return render(request, 'checkout/checkout.html', context)
