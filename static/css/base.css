@@ -93,7 +93,7 @@ body {
 .footer-background {
     background: url('/media/coffee_12.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 300px;
+    height: 200px;
     min-width: 100%;
 }
 
