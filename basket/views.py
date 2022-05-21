@@ -35,8 +35,6 @@ def change_qty(request, item_id):
 
     item = item_id
     quantity = int(request.POST.get('quantity'))
-    print(item)
-    print(quantity)
 
     basket = request.session['basket']
     # print(basket)
@@ -54,7 +52,5 @@ def change_qty(request, item_id):
         return HttpResponse(status=500)
 
     request.session['basket'] = basket
-
-    print(basket)
 
     return render(request, 'basket/basket.html')

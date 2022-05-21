@@ -15,7 +15,7 @@ def basket_contents(request):
     delivery_threshold = settings.DELIVERY_THRESHOLD
 
     basket = request.session.get('basket', {})
-    print(basket)
+    # print(basket)
 
     for item_id, quantity in basket.items():
         product = get_object_or_404(Product, pk=item_id)

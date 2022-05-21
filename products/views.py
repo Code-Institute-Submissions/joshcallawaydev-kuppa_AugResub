@@ -50,7 +50,7 @@ def all_products(request):
 
             all_products = all_products.filter(queries)
 
-    print(all_products)
+    # print(all_products)
 
     sorting_choice = '{0}_{1}'.format(sort, direction)
 
@@ -70,7 +70,7 @@ def product_details(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    print(product)
+    # print(product)
     context = {
         'product': product,
     }

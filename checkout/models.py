@@ -36,7 +36,7 @@ class Order(models.Model):
 
     def update_total(self):
         """update total after each new item"""
-        self.total = self.order_items.aggregate(Sum('order_item_total'))['order_item_total_sum']
+        self.total = self.order_items.aggregate(Sum('order_item_total'))['order_item_total__sum'] or 0
         if self.total < settings.DELIVERY_THRESHOLD:
             self.delivery = self.total * settings.DELIVERY_PERCENTAGE / 100
         else:
