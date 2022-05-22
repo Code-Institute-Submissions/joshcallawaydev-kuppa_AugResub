@@ -117,8 +117,8 @@ def checkout_complete(request, order_number):
     """
     Handle successful checkouts
     """
-    save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_nbr=order_number)
+    save_info = request.session.get('save_info')
     messages.success(request, f'{order_number} successfully processed! \
                             A confirmation email will be sent to {order.email}.')
 
