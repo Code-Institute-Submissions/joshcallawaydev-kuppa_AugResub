@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'basket',
     'crispy_forms',
     'checkout',
+    'accounts',
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.google',

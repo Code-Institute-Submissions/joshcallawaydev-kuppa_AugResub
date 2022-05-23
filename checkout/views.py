@@ -11,23 +11,26 @@ from django.contrib import messages
 from django.conf import settings
 from basket.contexts import basket_contents
 from products.models import Product
+from accounts.models import UserAccount
+from accounts.forms import UserAccountForm
 from .forms import OrderForm
 from .models import Order, OrderItem
 
 
-# @require_POST
-# def cache_checkout_data(request):
-#     try:
-#         pid = request.POST.get('client_secret').split('_secret')[0]
-#         stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
-#         stripe.PaymentIntent.modify(pid, metadata={
-#             'basket': json.dumps(request.session.get('basket', {})),
-#             'save_info': request.POST.get('save_info'),
-#             'username': request.user,
-#         })
-#         return HttpResponse(status=200)
-#     except Exception as e:
-#         messages.error(request, ('Sorry your payment cannot be processed.'))
+@require_POST
+def cache_checkout_data(request):
+    """ cache checlout data """
+    try:
+        stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.PaymentIntent.modify(pid, metadata={
+            'username': request.user,
+            'basket': json.dumps(request.session.get('basket', {})),
+            'save_info': request.POST.get('save_info'),
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, ('Sorry your payment cannot be processed.'))
 
 
 def checkout(request):
@@ -92,18 +95,21 @@ def checkout(request):
                            "There's nothing in your basket at the moment")
             return redirect(reverse('products'))
 
+    # get basket contents
     current_basket = basket_contents(request)
+    # get basket total
     total = current_basket['grand_total']
+    # total for stripe
     stripe_total = round(total * 100)
+    # gets secret key
     stripe.api_key = stripe_secret_key
     intent = stripe.PaymentIntent.create(amount=stripe_total,
                                          currency=settings.STRIPE_CURRENCY)
 
     if not stripe_public_key:
-        messages.warning(request, ('Stripe public key is missing'))
+        messages.warning(request, ('Stripe public key missing'))
 
     order_form = OrderForm()
-    # print(intent)
 
     context = {
         'order_form': order_form,
@@ -114,18 +120,42 @@ def checkout(request):
 
 
 def checkout_complete(request, order_number):
-    """
-    Handle successful checkouts
-    """
+    """Handles a successful checkout"""
+    # gets order
     order = get_object_or_404(Order, order_nbr=order_number)
+    # monitors save info check box
     save_info = request.session.get('save_info')
-    messages.success(request, f'{order_number} successfully processed! \
-                            A confirmation email will be sent to {order.email}.')
 
+    # is active user?
+    if request.user.is_authenticated:
+        account = UserAccount.objects.get(user=request.user)
+
+        order.user_account = account
+        order.save()
+
+        if save_info:
+            account_data = {
+                'default_phone_nbr': order.phone_nbr,
+                'default_address_line_one': order.address_line_one,
+                'default_address_line_two': order.address_line_two,
+                'default_city': order.city,
+                'default_county': order.county,
+                'default_postcode': order.postcode,
+                'default_country': order.country,
+            }
+            user_account_form = UserAccountForm(account_data, instance=account)
+            if user_account_form.is_valid():
+                user_account_form.save()
+
+    messages.success(request, f'{order_number} successfully processed!')
+
+    # deletes basket is one is active
     if 'basket' in request.session:
         del request.session['basket']
 
+    # sets context for html
     context = {
+        'account': account,
         'order': order,
     }
 

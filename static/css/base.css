@@ -130,6 +130,30 @@ body {
     overflow: visible;
 }
 
+.new-container {
+    margin-bottom: 2rem;
+}
+
+.allauth-form-inner-content {
+    height: 70vh;
+}
+
+.allauth-form-inner-content label {
+    margin-top: 1rem;
+}
+
+.allauth-form-inner-content input {
+    border: 1px solid #804102;
+}
+
+.allauth-form-inner-content button {
+    margin-top: 2rem;
+}
+
+.allauth-form-inner-content h1 {
+    margin-top: 2rem;
+}
+
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {
@@ -162,5 +186,8 @@ body {
 
     .head-container {
         padding-top: 160px;
+    }
+    .new-container {
+        margin-top: 13rem;
     }
 }

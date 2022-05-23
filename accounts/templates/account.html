@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+
+{% block page_header %}
+<div class="container head-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid title-container basket_container mb-3">
+    <div class="row">
+        <div class="col-12">
+            <h1>Account</h1>
+            <hr>
+        </div>
+        <div class="col-12 mt-4">
+            <p>Welcome to your profile {{ account.user|title }}</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p class="display-6">Delivery Information:</p>
+                <form class="mb-4" action="{% url 'account' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-kuppa text-decoration-none text-uppercase mt-3">Update</button>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="display-6">Orders:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Order #</th>
+                            <th scope="col">Grand Total</th>
+                        </tr>
+                    </thead>
+                    {% for order in orders %}
+                    <tbody>
+                        <tr>
+                            <td>{{ order.date }}</td>
+                            <td>{{ order.order_nbr }}</td>
+                            <td>{{ order.grand_total }}</td>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
