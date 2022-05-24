@@ -8,7 +8,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         """ docstring """
         model = Order
-        fields = ('email', 'full_name', 'phone_nbr',
+        fields = ('email', 'full_name', 'phone_number',
                   'address_line_one', 'address_line_two',
                   'city', 'county', 'postcode',
                   'country',)
@@ -19,7 +19,7 @@ class OrderForm(forms.ModelForm):
         placeholders = {
             'email': 'Email Address',
             'full_name': 'Full Name',
-            'phone_nbr': 'Phone Number',
+            'phone_number': 'Phone Number',
             'address_line_one': 'Street Line 1',
             'address_line_two': 'Street Line 2',
             'city': 'City',

@@ -109,8 +109,29 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(request, ('Stripe public key missing'))
 
-    order_form = OrderForm()
+    # prefill form details
+    if request.user.is_authenticated:
+        try:
+            account = UserAccount.objects.get(user=request.user)
+            order_form = OrderForm(initial={
+                'full_name': account.user.get_full_name(),
+                'email': account.user.email,
+                'address_line_one': account.default_address_line_one,
+                'address_line_two': account.default_address_line_two,
+                'city': account.default_city,
+                'phone_number': account.default_phone_number,
+                'county': account.default_county,
+                'postcode': account.default_postcode,
+                'country': account.default_country,
+            })
+        except UserAccount.DoesNotExist:
+            order_form = OrderForm()
+    else:
+        order_form = OrderForm()
 
+    print(account.user)
+
+    # generate context for html
     context = {
         'order_form': order_form,
         'client_secret': intent.client_secret,
@@ -135,7 +156,7 @@ def checkout_complete(request, order_number):
 
         if save_info:
             account_data = {
-                'default_phone_nbr': order.phone_nbr,
+                'default_phone_number': order.phone_number,
                 'default_address_line_one': order.address_line_one,
                 'default_address_line_two': order.address_line_two,
                 'default_city': order.city,

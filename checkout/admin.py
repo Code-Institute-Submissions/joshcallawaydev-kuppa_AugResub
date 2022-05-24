@@ -22,7 +22,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ('order_nbr', 'full_name', 'date',
                     'grand_total', 'total', 'delivery',)
 
-    fields = ('user_account', 'order_nbr', 'full_name', 'phone_nbr',
+    fields = ('user_account', 'order_nbr', 'full_name', 'phone_number',
               'address_line_one', 'address_line_two', 'city',
               'county', 'postcode', 'country',
               'date', 'delivery', 'total',

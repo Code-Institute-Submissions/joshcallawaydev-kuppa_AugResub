@@ -14,7 +14,7 @@ class UserAccountForm(forms.ModelForm):
         """ init method docstring """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'default_phone_nbr': 'Phone Number',
+            'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
             'default_city': 'Town or City',
             'default_address_line_one': 'Street Address 1',
@@ -22,7 +22,7 @@ class UserAccountForm(forms.ModelForm):
             'default_county': 'County',
         }
 
-        self.fields['default_phone_nbr'].widget.attrs['autofocus'] = True
+        self.fields['default_phone_number'].widget.attrs['autofocus'] = True
 
         for field in self.fields:
             if field != 'default_country':
