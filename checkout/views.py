@@ -84,7 +84,7 @@ def checkout(request):
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_complete',
-                                    args=[order.order_nbr]))
+                                    args=[order.order_number]))
         else:
             messages.error(request, ('There was an error with your form. '
                                      'Please double check your information.'))
@@ -129,7 +129,7 @@ def checkout(request):
     else:
         order_form = OrderForm()
 
-    print(account.user)
+    # print(account.user)
 
     # generate context for html
     context = {
@@ -143,7 +143,7 @@ def checkout(request):
 def checkout_complete(request, order_number):
     """Handles a successful checkout"""
     # gets order
-    order = get_object_or_404(Order, order_nbr=order_number)
+    order = get_object_or_404(Order, order_number=order_number)
     # monitors save info check box
     save_info = request.session.get('save_info')
 

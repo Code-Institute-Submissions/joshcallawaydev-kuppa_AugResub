@@ -12,7 +12,7 @@ class Order(models.Model):
     """ order process class """
     user_account = models.ForeignKey(UserAccount, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
-    order_nbr = models.CharField(max_length=32, null=False, editable=False)
+    order_number = models.CharField(max_length=32, null=False, editable=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     phone_number = models.CharField(max_length=25, null=False, blank=False)
@@ -27,14 +27,14 @@ class Order(models.Model):
     total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
-    def _generate_order_nbr(self):
+    def _generate_order_number(self):
         """ generate a randon order number """
         return uuid.uuid4().hex.upper()
 
     def save(self, *args, **kwargs):
         """set order number after overwriting save"""
-        if not self.order_nbr:
-            self.order_nbr = self._generate_order_nbr()
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
 
         super().save(*args, **kwargs)
 
@@ -50,7 +50,7 @@ class Order(models.Model):
 
     def __str__(self):
         """ return order number """
-        return self.order_nbr
+        return self.order_number
 
 
 class OrderItem(models.Model):
@@ -67,4 +67,4 @@ class OrderItem(models.Model):
         super().save(*args, **kwargs)
 
     def _str_(self):
-        return f'SKU {self.product.sku} for {self.order.order_nbr}'
+        return f'SKU {self.product.sku} for {self.order.order_number}'

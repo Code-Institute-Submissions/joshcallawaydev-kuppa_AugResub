@@ -1,7 +1,7 @@
 """ account views """
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
-from checkout.models import Order
+# from checkout.models import Order
 from .models import UserAccount
 from .forms import UserAccountForm
 
@@ -22,7 +22,7 @@ def account(request):
     form = UserAccountForm(instance=account)
     # gets list of orders
     orders = account.orders.all()
-    print(orders)
+    # print(orders)
 
     # sets context for html
     context = {
@@ -37,7 +37,7 @@ def account(request):
 # def order_history(request, order_number):
 #     """ order history func """
 #     # gets order
-#     order = get_object_or_404(Order, order_nbr=order_number)
+#     order = get_object_or_404(Order, order_number=order_number)
 
 #     # make context available
 #     context = {
