@@ -15,3 +15,5 @@ Thank you for your order!
 All the best,
 
 the KUPPA team <3
+
+Questions: {{ contact_email }}
