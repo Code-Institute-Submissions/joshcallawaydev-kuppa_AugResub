@@ -1,0 +1,17 @@
+Hey {{ order.full_name|title }}
+
+This email is confirmation of your order from KUPPA. Your order info is below...
+
+Date of Order {{ order.date }}
+Order Number: {{ order.order_number }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to:
+
+{{ order.address_line_one }} in {{ order.city }}, {{ order.country }}, {{ order.postcode }}.
+
+Thank you for your order!
+
+All the best,
+
+the KUPPA team <3

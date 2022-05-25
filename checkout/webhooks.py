@@ -14,10 +14,13 @@ def webhook(request):
     """Listen for webhooks"""
     # Setup
     wh_secret = os.getenv('STRIPE_WH_SECRET')
+    print(wh_secret)
     stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
+    print(stripe.api_key)
 
     # Get the webhook and verify signature
     payload = request.body
+    print(payload)
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
 

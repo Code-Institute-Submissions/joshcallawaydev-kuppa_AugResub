@@ -152,6 +152,5 @@
 {{ block.super }}
 {{ public_key|json_script:"id_public_key" }}
 {{ client_secret|json_script:"id_secret_key" }}
-<script src="https://js.stripe.com/v3/"></script>
 <script src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
