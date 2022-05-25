@@ -3,7 +3,7 @@ import json
 import time
 
 from django.http import HttpResponse
-from profiles.models import UserAccount
+from accounts.models import UserAccount
 from products.models import Product
 from .models import Order, OrderItem
 
@@ -82,6 +82,7 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
+                    user_account=account,
                     address_line_one=shipping_details.address.line1,
                     address_line_two=shipping_details.address.line2,
                     city=shipping_details.address.city,
@@ -89,7 +90,6 @@ class StripeWH_Handler:
                     postcode=shipping_details.address.postal_code,
                     country=shipping_details.address.country,
                     full_name=shipping_details.name,
-                    user_account=account,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     original_basket=basket,

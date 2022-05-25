@@ -31,6 +31,7 @@ def cache_checkout_data(request):
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, ('Sorry your payment cannot be processed.'))
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
@@ -64,16 +65,9 @@ def checkout(request):
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_item = OrderItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data)
-                        order_item.save()
-
-                    else:
-                        messages.error(request, ("We do not recognise the items in your basket."))
-
+                    order_item = OrderItem(order=order, product=product,
+                                           quantity=item_data)
+                    order_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag isnt available")
