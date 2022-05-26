@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_header %}
+<div class="container head-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container title-container products_container">
+    <div class="row text-center">
+        <div class="col">
+            <h1 class="mt-4">Product Management</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <h5 class="my-4 text-center">Please add a product</h5>
+            <form method="POST" action="{% url 'add_product' %}" class="text-left form my-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center my-5">
+                    <a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-kuppa text-decoration-none text-uppercase" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <h5 class="my-4 text-center">Available products</h5>
+            <table class="table text-left">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                    </tr>
+                </thead>
+                {% for item in all_products %}
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="align-items-center custom-img">
+                                {% if item.image_url %}
+                                <img class="img-thumbnail rounded" src="{{ item.image_url }}"
+                                    alt="{{ item.name }}">
+                                {% else %}
+                                <img class="img-thumbnail rounded" src="{{ MEDIA_URL }}noimage.jpeg"
+                                    alt="{{ item.name }}">
+                                {% endif %}
+                            </div>
+                        </th>
+                        <td class="align-items-center">{{ item.name }}</td>
+                        <td>{{ item.category.friendly_name }}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

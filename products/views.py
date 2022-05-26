@@ -2,8 +2,9 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
 from django.db.models.functions import Lower
+from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -76,3 +77,18 @@ def product_details(request, product_id):
     }
 
     return render(request, 'all_products/product_details.html', context)
+
+
+def add_product(request):
+    """Add product to store"""
+    # grab all the products
+    all_products = Product.objects.all()
+    # store product form in form var
+    form = ProductForm()
+    # generate context for html page
+    context = {
+        'form': form,
+        'all_products': all_products
+    }
+
+    return render(request, 'all_products/add_product.html', context)
