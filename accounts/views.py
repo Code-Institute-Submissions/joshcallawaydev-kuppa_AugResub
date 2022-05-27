@@ -17,9 +17,10 @@ def account(request):
             # save new form deets to profile
             form.save()
             messages.success(request, 'account updated successfully')
+    else:
+        # sets form details
+        form = UserAccountForm(instance=account)
 
-    # sets form details
-    form = UserAccountForm(instance=account)
     # gets list of orders
     orders = account.orders.all()
     # print(orders)

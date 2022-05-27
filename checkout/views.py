@@ -41,6 +41,8 @@ def checkout(request):
     stripe_public_key = os.getenv('STRIPE_PUBLIC_KEY')
     stripe_secret_key = os.getenv('STRIPE_SECRET_KEY')
 
+    media_url = settings.MEDIA_URL
+
     if request.method == 'POST':
         basket = request.session.get('basket', {})
         form_data = {
@@ -130,6 +132,7 @@ def checkout(request):
         'order_form': order_form,
         'client_secret': intent.client_secret,
         'public_key': stripe_public_key,
+        'media_url': media_url
         }
     return render(request, 'checkout/checkout.html', context)
 

@@ -1,13 +1,19 @@
 """Basket module views"""
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.conf import settings
 from django.contrib import messages
 from products.models import Product
 
 
 def view_basket(request):
     """renders the basket view of products"""
+    media_url = settings.MEDIA_URL
 
-    return render(request, 'basket/basket.html')
+    context = {
+        'media_url': media_url
+    }
+
+    return render(request, 'basket/basket.html', context)
 
 
 def add_to_basket(request, item_id):

@@ -1,6 +1,7 @@
 """A module to build the product views"""
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
@@ -19,6 +20,7 @@ def all_products(request):
 
     all_products = Product.objects.all()
     categories = Category.objects.all()
+    media_url = settings.MEDIA_URL
 
     if request.GET:
         if 'sort' in request.GET:
@@ -59,7 +61,8 @@ def all_products(request):
         'all_products': all_products,
         'search': query,
         'categories': categories,
-        "sorting_choice": sorting_choice
+        'sorting_choice': sorting_choice,
+        'media_url': media_url
     }
 
     return render(request, 'all_products/all_products.html', context)
@@ -71,9 +74,10 @@ def product_details(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    # print(product)
+    media_url = settings.MEDIA_URL
     context = {
         'product': product,
+        'media_url': media_url
     }
 
     return render(request, 'all_products/product_details.html', context)
@@ -86,9 +90,12 @@ def add_product(request):
     # store product form in form var
     form = ProductForm()
     # generate context for html page
+    media_url = settings.MEDIA_URL
+
     context = {
         'form': form,
-        'all_products': all_products
+        'all_products': all_products,
+        'media_url': media_url
     }
 
     return render(request, 'all_products/add_product.html', context)
