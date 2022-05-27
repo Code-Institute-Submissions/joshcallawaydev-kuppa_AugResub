@@ -1,5 +1,6 @@
 """ account views """
 from django.shortcuts import render, get_object_or_404
+from django.conf import settings
 from django.contrib import messages
 # from checkout.models import Order
 from .models import UserAccount
