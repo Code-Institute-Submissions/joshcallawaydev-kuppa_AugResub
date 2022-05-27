@@ -37,6 +37,7 @@
                         <th scope="col"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Category</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 {% for item in all_products %}
@@ -55,6 +56,8 @@
                         </th>
                         <td class="align-items-center">{{ item.name }}</td>
                         <td>{{ item.category.friendly_name }}</td>
+                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'edit_product' item.id %}">Edit</a></td>
+                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'delete_product' item.id %}">Delete</a></td>
                     </tr>
                 </tbody>
                 {% endfor %}

@@ -109,3 +109,43 @@ def add_product(request):
     }
 
     return render(request, 'all_products/add_product.html', context)
+
+
+def delete_product(request, product_id):
+    """ delete a product """
+    # get the product
+    product = get_object_or_404(Product, pk=product_id)
+    # delete the product
+    product.delete()
+    messages.success(request, 'Product Deleted')
+
+    return redirect(reverse('add_product'))
+
+
+def edit_product(request, product_id):
+    """ edit a product """
+    product = get_object_or_404(Product, pk=product_id)
+    media_url = settings.MEDIA_URL
+
+    if request.method == 'POST':
+        # populate form
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            # if form valid, save
+            form.save()
+            messages.success(request, 'Product updated!')
+            # redirect to the product
+            return redirect(reverse('product_details', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please try again.')
+    else:
+        form = ProductForm(instance=product)
+
+    # generate context for html
+    context = {
+        'product': product,
+        'media_url': media_url,
+        'form': form,
+    }
+
+    return render(request, 'all_products/edit_product.html', context)
