@@ -87,8 +87,18 @@ def add_product(request):
     """Add product to store"""
     # grab all the products
     all_products = Product.objects.all()
-    # store product form in form var
-    form = ProductForm()
+    
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You successfully added a product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please check form.')
+    else:
+        form = ProductForm()
+
     # generate context for html page
     media_url = settings.MEDIA_URL
 

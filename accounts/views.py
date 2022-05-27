@@ -10,6 +10,7 @@ def account(request):
     """ Display the user's profile. """
     # creates instance of user account
     account = get_object_or_404(UserAccount, user=request.user)
+    media_url = settings.MEDIA_URL
 
     if request.method == 'POST':
         form = UserAccountForm(request.POST, instance=account)
@@ -30,11 +31,12 @@ def account(request):
         'orders': orders,
         'account': account,
         'form': form,
+        'media_url': media_url
     }
 
     return render(request, 'account.html', context)
 
-# will develop this in future iterations
+
 # def order_history(request, order_number):
 #     """ order history func """
 #     # gets order
