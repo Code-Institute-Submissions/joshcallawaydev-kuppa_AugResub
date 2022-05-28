@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -15,16 +15,20 @@
 
 {% block content %}
 
-<div class="text-left checkout-complete">
+<div class="text-left container mb-3">
     <div class="row">
-        <div class="col-12 mt-5 text-center">
+        <div class="col-12 mt-3 text-center">
             <h1>Thank you! {{ order.full_name }}</h1>
             <hr>
         </div>
     </div>
     <div class="row text-center">
         <div class="col-12">
+            {% if account %}
+            <p>This is a historical order. Dated {{ order.date }}</p>
+            {% else %}
             <p>A confirmation email will be sent to {{ order.email }}</p>
+            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -46,11 +50,19 @@
         </div>
     </div>
     <div class="row">
+        {% if account %}
+        <div class="col text-center mt-5">
+            <button href="{% url 'account' %}" class="btn btn-kuppa text-decoration-none text-uppercase"
+                role="button">My
+                Account</button>
+        </div>
+        {{ else }}
         <div class="col-12 my-5 d-flex justify-content-center align-items-center">
             <p class="m-0">Forget something?</p>
             <a href="{% url 'products' %}" class="btn btn-kuppa text-decoration-none text-uppercase" role="button"><i
                     class="fa-solid fa-circle-chevron-left"></i> All products</a>
         </div>
+        {% endif %}
     </div>
 </div>
 

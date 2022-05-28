@@ -1,6 +1,7 @@
 """A module to build the product views"""
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -83,11 +84,18 @@ def product_details(request, product_id):
     return render(request, 'all_products/product_details.html', context)
 
 
+@login_required
 def add_product(request):
     """Add product to store"""
+
+    # determine user is super before accessing page
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorised to visit this page.')
+        return redirect(reverse('all_products'))
+
     # grab all the products
     all_products = Product.objects.all()
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -111,8 +119,15 @@ def add_product(request):
     return render(request, 'all_products/add_product.html', context)
 
 
+@login_required
 def delete_product(request, product_id):
     """ delete a product """
+
+    # determine user is super before accessing page
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorised to visit this page.')
+        return redirect(reverse('all_products'))
+
     # get the product
     product = get_object_or_404(Product, pk=product_id)
     # delete the product
@@ -122,8 +137,15 @@ def delete_product(request, product_id):
     return redirect(reverse('add_product'))
 
 
+@login_required
 def edit_product(request, product_id):
     """ edit a product """
+
+    # determine user is super before accessing page
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorised to visit this page.')
+        return redirect(reverse('all_products'))
+
     product = get_object_or_404(Product, pk=product_id)
     media_url = settings.MEDIA_URL
 

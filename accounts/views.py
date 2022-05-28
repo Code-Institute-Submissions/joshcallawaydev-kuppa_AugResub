@@ -2,11 +2,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 # from checkout.models import Order
 from .models import UserAccount
 from .forms import UserAccountForm
+from checkout.models import Order
 
 
+@login_required
 def account(request):
     """ Display the user's profile. """
     # creates instance of user account
@@ -38,15 +41,15 @@ def account(request):
     return render(request, 'account.html', context)
 
 
-# def order_history(request, order_number):
-#     """ order history func """
-#     # gets order
-#     order = get_object_or_404(Order, order_number=order_number)
+def order_history(request, order_number):
+    """ order history func """
+    # gets order
+    order = get_object_or_404(Order, order_number=order_number)
 
-#     # make context available
-#     context = {
-#         'order': order,
-#         'from_account': True,
-#     }
+    # make context available
+    context = {
+        'order': order,
+        'account': True,
+    }
 
-#     return render(request, 'checkout/checkout_complete.html', context)
+    return render(request, 'checkout/checkout_complete.html', context)

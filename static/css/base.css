@@ -19,6 +19,15 @@ body {
     min-width: 100%;
 }
 
+.margin-right {
+    margin-right: 3rem;
+}
+
+.container {
+    width: 100%;
+    padding-top: 100px;
+}
+
 /* Bulma */
 .icon {
     align-items: center;
@@ -84,10 +93,6 @@ body {
 
 .products_container {
     min-height: 80vh;
-}
-
-.title-container {
-    margin-top: 8rem;
 }
 
 .footer-background {
@@ -156,17 +161,6 @@ body {
 
 /* ------- Media Queries ------- */
 
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
-
-
 /* larger container on xl viewports */
 @media (min-width: 1200px) {
     .container {
@@ -184,8 +178,8 @@ body {
         z-index: 1030;
     }
 
-    .head-container {
-        padding-top: 160px;
+    .header-container {
+        padding-top: 100px;
     }
     .new-container {
         margin-top: 13rem;

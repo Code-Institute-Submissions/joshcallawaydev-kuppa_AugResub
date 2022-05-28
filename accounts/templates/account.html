@@ -6,7 +6,7 @@
 
 
 {% block page_header %}
-<div class="container head-container">
+<div class="header-container">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container title-container basket_container mb-3">
+<div class="container mt-4 mb-3">
     <div class="row">
         <div class="col-12">
             <h1>Account</h1>
@@ -34,11 +34,12 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="display-6">Orders:</p>
-                <table class="table">
+                <table class="table w-100">
                     <thead>
                         <tr>
                             <th scope="col">Date</th>
                             <th scope="col">Order #</th>
+                            <th scope="col">Grand Total</th>
                             <th scope="col">Grand Total</th>
                         </tr>
                     </thead>
@@ -46,13 +47,25 @@
                     <tbody>
                         <tr>
                             <td>{{ order.date }}</td>
-                            <td>{{ order.order_number }}</td>
+                            <td>{{ order.order_number|truncatechars:8 }}</td>
                             <td>{{ order.grand_total }}</td>
+                            <td><a class="btn btn-kuppa text-decoration-none text-uppercase w-100"
+                                    href="{% url 'order_history' order.order_number %}" role="button">View</a></td>
                         </tr>
                     </tbody>
                     {% endfor %}
                 </table>
             </div>
+            {% if request.user.is_superuser %}
+            <div class="row my-5">
+                <div class="col-6 offset-3 d-flex justify-content-between align-items-center">
+                    <p class="m-0">Would you like to access the ADMIN dashboard?</p>
+                    <button class="btn btn-kuppa text-decoration-none text-uppercase"
+                        href="https://8000-joshcallawaydev-kuppa-nujxk0fklg9.ws-eu46.gitpod.io/admin/"
+                        target="_blank">ADMIN</button>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 
