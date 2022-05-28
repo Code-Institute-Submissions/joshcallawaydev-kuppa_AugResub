@@ -7,16 +7,20 @@ from django_countries.fields import CountryField
 
 
 class UserAccount(models.Model):
-    """ standard user model metrics """
+    """standard user model metrics"""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(max_length=25, null=True, blank=True)
-    default_address_line_one = models.CharField(max_length=80, null=True, blank=True)
-    default_address_line_two = models.CharField(max_length=80, null=True, blank=True)
+    default_phone_number = models.CharField(
+        max_length=25, null=True, blank=True)
+    default_address_line_one = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_address_line_two = models.CharField(
+        max_length=80, null=True, blank=True)
     default_city = models.CharField(max_length=40, null=True, blank=True)
     default_county = models.CharField(max_length=40, null=True, blank=True)
     default_postcode = models.CharField(max_length=25, null=True, blank=True)
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_country = CountryField(
+        blank_label="Country", null=True, blank=True)
 
     def __str__(self):
         return self.user.username

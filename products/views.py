@@ -36,7 +36,7 @@ def all_products(request):
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
-                    sort_key = '-{0}'.format(sort_key)
+                    sort_key = f'-{sort_key}'
             all_products = all_products.order_by(sort_key)
 
         if 'category' in request.GET:
@@ -50,13 +50,12 @@ def all_products(request):
                 messages.error(request, "Please specify a search!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
 
             all_products = all_products.filter(queries)
 
-    # print(all_products)
-
-    sorting_choice = '{0}_{1}'.format(sort, direction)
+    sorting_choice = f'{sort}_{direction}'
 
     context = {
         'all_products': all_products,
@@ -103,7 +102,8 @@ def add_product(request):
             messages.success(request, 'You successfully added a product!')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please check form.')
+            messages.error(
+                request, 'Failed to add product. Please check form.')
     else:
         form = ProductForm()
 
@@ -159,7 +159,8 @@ def edit_product(request, product_id):
             # redirect to the product
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please try again.')
+            messages.error(
+                request, 'Failed to update product. Please try again.')
     else:
         form = ProductForm(instance=product)
 

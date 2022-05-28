@@ -56,11 +56,10 @@
     <div class="row">
         {% if account %}
         <div class="col text-center mt-5">
-            <a href="{% url 'account' %}" class="btn btn-kuppa text-decoration-none text-uppercase"
-                role="button">My
+            <a href="{% url 'account' %}" class="btn btn-kuppa text-decoration-none text-uppercase" role="button">My
                 Account</a>
         </div>
-        {{ else }}
+        {% else %}
         <div class="col-12 my-5 d-flex justify-content-center align-items-center">
             <p class="m-0">Forget something?</p>
             <a href="{% url 'products' %}" class="btn btn-kuppa text-decoration-none text-uppercase" role="button"><i

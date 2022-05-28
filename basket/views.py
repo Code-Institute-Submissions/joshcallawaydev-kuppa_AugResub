@@ -54,7 +54,8 @@ def change_qty(request, item_id):
                 messages.info(request, 'Item removed')
 
     except Exception as e:
-        messages.error(request, f'{e} occured during your last action for {item}')
+        messages.error(
+            request, f'{e} occured during your last action for {item}')
         return HttpResponse(status=500)
 
     request.session['basket'] = basket

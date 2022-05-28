@@ -133,7 +133,7 @@ def checkout(request):
         'client_secret': intent.client_secret,
         'public_key': stripe_public_key,
         'media_url': media_url
-        }
+    }
     return render(request, 'checkout/checkout.html', context)
 
 
