@@ -125,8 +125,6 @@ def checkout(request):
     else:
         order_form = OrderForm()
 
-    # print(account.user)
-
     # generate context for html
     context = {
         'order_form': order_form,

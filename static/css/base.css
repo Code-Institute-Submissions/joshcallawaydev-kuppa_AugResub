@@ -1,3 +1,5 @@
+/* general CSS rules */
+
 html {
     height: 100%;
     box-sizing: border-box;
@@ -17,10 +19,6 @@ body {
     padding: 200px 30px 0;
     margin: 0;
     min-width: 100%;
-}
-
-.margin-right {
-    margin-right: 3rem;
 }
 
 .container {
@@ -87,8 +85,8 @@ body {
     background-color: #804102;
 }
 
-.products_container {
-    min-height: 80vh;
+.small-text {
+    font-size: 1.6rem;
 }
 
 .footer-background {
@@ -96,28 +94,6 @@ body {
     background-size: cover;
     height: 200px;
     min-width: 100%;
-}
-
-.btn-box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 1rem 1rem;
-}
-
-.category-btn {
-    width: 8rem !important;
-    height: 2rem !important;
-    margin-top: 1rem;
-}
-
-.basket_container {
-    min-height: 90vh
-}
-
-.custom-img {
-    height: 6rem;
-    width: 6rem;
 }
 
 .message-container {
@@ -130,6 +106,22 @@ body {
 .kuppa-toast {
     overflow: visible;
 }
+
+.custom-img {
+    height: 6rem;
+    width: 6rem;
+}
+
+/* products section */
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1rem 1rem;
+}
+
+/* all auth specific */
 
 .allauth-form-inner-content {
     height: 70vh;
@@ -153,6 +145,12 @@ body {
 
 /* ------- Media Queries ------- */
 
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 50px;
+    }
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 90%;
@@ -162,11 +160,5 @@ body {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 100px;
-    }
-}
-
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 50px;
     }
 }

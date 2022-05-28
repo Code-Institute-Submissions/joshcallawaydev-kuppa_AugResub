@@ -43,7 +43,6 @@ def change_qty(request, item_id):
     quantity = int(request.POST.get('quantity'))
 
     basket = request.session['basket']
-    # print(basket)
 
     try:
         if item in basket:

@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container products_container">
+<div class="container">
     <div class="row text-center">
         <div class="col">
             <h1 class="mt-4">Product Management</h1>
@@ -46,8 +46,7 @@
                         <th scope="row">
                             <div class="align-items-center custom-img">
                                 {% if item.image_url %}
-                                <img class="img-thumbnail rounded" src="{{ item.image_url }}"
-                                    alt="{{ item.name }}">
+                                <img class="img-thumbnail rounded" src="{{ item.image_url }}" alt="{{ item.name }}">
                                 {% else %}
                                 <img class="img-thumbnail rounded" src="{{ media_url }}noimage.png"
                                     alt="{{ item.name }}">
@@ -56,8 +55,10 @@
                         </th>
                         <td class="align-items-center">{{ item.name }}</td>
                         <td>{{ item.category.friendly_name }}</td>
-                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'edit_product' item.id %}">Edit</a></td>
-                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'delete_product' item.id %}">Delete</a></td>
+                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase"
+                                href="{% url 'edit_product' item.id %}">Edit</a></td>
+                        <td><a class="btn btn-kuppa text-decoration-none text-uppercase"
+                                href="{% url 'delete_product' item.id %}">Delete</a></td>
                     </tr>
                 </tbody>
                 {% endfor %}

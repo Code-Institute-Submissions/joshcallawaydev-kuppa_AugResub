@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container products_container">
+<div class="container">
     <div class="row text-center">
         <div class="col">
             <h1 class="mt-4">Product Management</h1>
@@ -25,7 +25,8 @@
                 {{ form|crispy }}
                 <div class="text-center my-5">
                     <a class="btn btn-kuppa text-decoration-none text-uppercase" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-kuppa text-decoration-none text-uppercase" type="submit">Edit Product</button>
+                    <button class="btn btn-kuppa text-decoration-none text-uppercase" type="submit">Edit
+                        Product</button>
                 </div>
             </form>
         </div>

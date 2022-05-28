@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-{% endblock %}
 
 
 {% block page_header %}
@@ -34,6 +31,7 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="display-6">Orders:</p>
+                {% if orders > 0 %}
                 <table class="table w-100">
                     <thead>
                         <tr>
@@ -55,14 +53,18 @@
                     </tbody>
                     {% endfor %}
                 </table>
+                {% else %}
+                <p>You do not have any orders yet.</p>
+                {% endif %}
             </div>
             {% if request.user.is_superuser %}
             <div class="row my-5">
-                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 d-flex justify-content-between align-items-center">
+                <div
+                    class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 d-flex justify-content-between align-items-center">
                     <p class="m-0 text-center">Access the ADMIN dashboard?</p>
                     <a class="btn btn-kuppa text-decoration-none text-uppercase"
-                        href="https://8000-joshcallawaydev-kuppa-nujxk0fklg9.ws-eu46.gitpod.io/admin/"
-                        target="_blank" type="button">ADMIN</a>
+                        href="https://8000-joshcallawaydev-kuppa-nujxk0fklg9.ws-eu46.gitpod.io/admin/" target="_blank"
+                        type="button">ADMIN</a>
                 </div>
             </div>
             {% endif %}

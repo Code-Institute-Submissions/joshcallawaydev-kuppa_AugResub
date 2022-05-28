@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from checkout.models import Order
+from products.models import Product
 from .models import UserAccount
 from .forms import UserAccountForm
 
@@ -28,7 +29,6 @@ def account(request):
 
     # gets list of orders
     orders = account.orders.all()
-    # print(orders)
 
     # sets context for html
     context = {
