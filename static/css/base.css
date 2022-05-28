@@ -25,6 +25,7 @@ body {
 
 .container {
     width: 100%;
+    min-height: 80vh;
     padding-top: 100px;
 }
 
@@ -52,11 +53,6 @@ body {
     font-weight: 600;
     min-width: 200px;
     border-radius: 200px;
-}
-
-.btn-black {
-    background: #804102;
-    color: #ffffff;
 }
 
 .shop-now-button:hover,
@@ -135,10 +131,6 @@ body {
     overflow: visible;
 }
 
-.new-container {
-    margin-bottom: 2rem;
-}
-
 .allauth-form-inner-content {
     height: 70vh;
 }
@@ -161,27 +153,20 @@ body {
 
 /* ------- Media Queries ------- */
 
-/* larger container on xl viewports */
 @media (min-width: 1200px) {
     .container {
         max-width: 90%;
     }
 }
 
-/* fixed top navbar only on medium above */
 @media (min-width: 992px) {
-    .desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
     .header-container {
         padding-top: 100px;
     }
-    .new-container {
-        margin-top: 13rem;
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 50px;
     }
 }

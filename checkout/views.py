@@ -165,7 +165,7 @@ def checkout_complete(request, order_number):
             if user_account_form.is_valid():
                 user_account_form.save()
 
-    messages.success(request, f'{order_number} successfully processed!')
+        messages.success(request, f'{order_number} successfully processed!')
 
     # deletes basket is one is active
     if 'basket' in request.session:
@@ -173,7 +173,6 @@ def checkout_complete(request, order_number):
 
     # sets context for html
     context = {
-        'account': account,
         'order': order,
     }
 

@@ -17,8 +17,8 @@
 
 <div class="text-left container mb-3">
     <div class="row">
-        <div class="col-12 mt-3 text-center">
-            <h1>Thank you! {{ order.full_name }}</h1>
+        <div class="col-12 mt-5 text-center">
+            <h1 class="mb-4">Thank you! {{ order.full_name }}</h1>
             <hr>
         </div>
     </div>
@@ -35,7 +35,11 @@
         <div class="col-12 col-md-6">
             <p class="display-6">Order Details</p>
             <p class="">Total: £{{ order.grand_total }}</p>
-            <p class="">Order #{{ order.order_number }}</p>
+            {% if account %}
+            <p class="">Order #{{ order.order_number|truncatechars:8 }}</p>
+            {% else %}
+            <p class="">Order #{{ order.order_number|truncatechars:8 }}</p>
+            {% endif %}
             <p class="">Name: {{ order.full_name }}</p>
             <p class="">Date: {{ order.date }}</p>
             <p class="">Delivery Postcode: {{ order.postcode }}</p>
@@ -52,9 +56,9 @@
     <div class="row">
         {% if account %}
         <div class="col text-center mt-5">
-            <button href="{% url 'account' %}" class="btn btn-kuppa text-decoration-none text-uppercase"
+            <a href="{% url 'account' %}" class="btn btn-kuppa text-decoration-none text-uppercase"
                 role="button">My
-                Account</button>
+                Account</a>
         </div>
         {{ else }}
         <div class="col-12 my-5 d-flex justify-content-center align-items-center">

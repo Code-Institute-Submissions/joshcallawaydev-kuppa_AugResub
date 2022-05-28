@@ -48,7 +48,6 @@
                         </th>
                         <td class="align-items-center">{{ item.product_name }}</td>
                         <td>{{ item.product_price }}</td>
-                        <!-- <td>{{ item.quantity }}</td> -->
                         <td>
                             <form class="form d-flex align-items-center justify-content-between" action="{% url 'change_qty' item.item_id %}" method="POST">
                                 {% csrf_token %}
@@ -56,7 +55,7 @@
                                     <input class="form-control" type="number" name="quantity"
                                         value="{{ item.quantity }}" min="0" max="99">
                                 </div>
-                                <button type="submit" class="btn btn-link btn-sm text-brown text-decoration-none text-uppercase">Update</button>
+                                <button type="submit" class="btn btn-kuppa text-decoration-none text-uppercase">Update</button>
                             </form>
                         </td>
                     </tr>
