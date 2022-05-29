@@ -31,7 +31,7 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="display-6">Orders:</p>
-                {% if orders > 0 %}
+                {% if orders %}
                 <table class="table w-100">
                     <thead>
                         <tr>
@@ -54,7 +54,7 @@
                     {% endfor %}
                 </table>
                 {% else %}
-                <p>You do not have any orders yet.</p>
+                <p>You have no orders.</p>
                 {% endif %}
             </div>
             {% if request.user.is_superuser %}
