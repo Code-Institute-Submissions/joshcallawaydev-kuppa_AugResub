@@ -27,7 +27,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-8(2=d3&^evrr+dd%x_vw_qra2n*@oa%t7z-*x!-xwrhm-oa(f-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
