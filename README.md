@@ -153,3 +153,4 @@ TBA - ![text](./link)
 ## Features
 
 1) add option for changing coffee bag sizes
+2) update the inbuilt django widgets to more customizable look and feel

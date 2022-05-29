@@ -86,14 +86,13 @@ def product_details(request, product_id):
 @login_required
 def add_product(request):
     """Add product to store"""
-
-    # determine user is super before accessing page
-    if not request.user.is_superuser:
-        messages.error(request, 'You are not authorised to visit this page.')
-        return redirect(reverse('all_products'))
-
     # grab all the products
     all_products = Product.objects.all()
+    # determine user is super before accessing page
+    if not request.user.is_superuser:
+        context = {'all_products': all_products}
+        messages.error(request, 'You are not authorised to visit this page.')
+        return render(request, 'all_products/all_products.html', context)
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -123,10 +122,14 @@ def add_product(request):
 def delete_product(request, product_id):
     """ delete a product """
 
+    # grab all the products
+    all_products = Product.objects.all()
+
     # determine user is super before accessing page
     if not request.user.is_superuser:
+        context = {'all_products': all_products}
         messages.error(request, 'You are not authorised to visit this page.')
-        return redirect(reverse('all_products'))
+        return render(request, 'all_products/all_products.html', context)
 
     # get the product
     product = get_object_or_404(Product, pk=product_id)
@@ -141,10 +144,14 @@ def delete_product(request, product_id):
 def edit_product(request, product_id):
     """ edit a product """
 
+    # grab all the products
+    all_products = Product.objects.all()
+
     # determine user is super before accessing page
     if not request.user.is_superuser:
+        context = {'all_products': all_products}
         messages.error(request, 'You are not authorised to visit this page.')
-        return redirect(reverse('all_products'))
+        return render(request, 'all_products/all_products.html', context)
 
     product = get_object_or_404(Product, pk=product_id)
     media_url = settings.MEDIA_URL
