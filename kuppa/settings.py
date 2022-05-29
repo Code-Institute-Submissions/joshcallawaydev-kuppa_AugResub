@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-8(2=d3&^evrr+dd%x_vw_qra2n*@oa%t7z-*x!-xwrhm-oa(f-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kuppa.herokuapp.com', 'localhost']
 
 # Application definition
 
