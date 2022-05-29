@@ -21,7 +21,7 @@ from .models import Order, OrderItem
 def cache_checkout_data(request):
     """ cache checlout data """
     try:
-        stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
+        stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.PaymentIntent.modify(pid, metadata={
             'username': request.user,
@@ -38,8 +38,8 @@ def checkout(request):
     """ checkout view """
 
     # grab keys from .env file
-    stripe_public_key = os.getenv('STRIPE_PUBLIC_KEY')
-    stripe_secret_key = os.getenv('STRIPE_SECRET_KEY')
+    stripe_public_key = os.environ.get('STRIPE_PUBLIC_KEY')
+    stripe_secret_key = os.environ.get('STRIPE_SECRET_KEY')
 
     media_url = settings.MEDIA_URL
 
