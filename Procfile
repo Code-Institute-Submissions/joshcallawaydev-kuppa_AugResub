@@ -1,1 +1,1 @@
-web: gunicorn kuppa.wsgi:application
+web: gunicorn kuppa-app.wsgi:application
