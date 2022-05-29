@@ -1,10 +1,18 @@
-<ul>
+<ul class="nav-flex m-0">
     <li class="list-inline-item">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+        <a class="text-brown nav-link d-block d-lg-none" href="{% url 'home' %}" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fa-solid fa-house"></i></div>
+                <p class="my-0 nav-text">Home</p>
+            </div>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="text-brown nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-search fa-lg"></i></div>
-                <p class="my-0">Search</p>
+                <div><i class="fas fa-search"></i></div>
+                <p class="my-0 nav-text">Search</p>
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -25,11 +33,11 @@
         </div>
     </li>
     <li class="list-inline-item dropdown">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        <a class="text-brown nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">Account</p>
+                <div><i class="fas fa-user"></i></div>
+                <p class="my-0 nav-text">Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -49,8 +57,8 @@
         <a class="{% if grand_total %}text-brown font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
             href="{% url 'view_basket' %}">
             <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p>
+                <div><i class="fas fa-shopping-bag"></i></div>
+                <p class="m-0 nav-text">
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                     {% else %}

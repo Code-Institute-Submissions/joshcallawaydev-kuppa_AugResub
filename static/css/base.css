@@ -27,6 +27,17 @@ body {
     padding-top: 100px;
 }
 
+.nav-text {
+    font-size: 0.8rem;
+}
+
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 /* Bulma */
 .icon {
     align-items: center;
