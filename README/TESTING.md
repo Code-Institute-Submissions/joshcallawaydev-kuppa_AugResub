@@ -99,7 +99,8 @@ IF ADMIN, have access to an admin panel
 Lighthouse
 ![Chrome lighthouse](./images/test_images/image_21.png)
 Cross browser
-LINK
+Firefox
+![Firefox](./images/test_images/firefox.png)
 Responsiveness
 ![Responsive testing](./images/test_images/responsive.png)
 ![Responsive testing](./images/test_images/responsive2.png)
