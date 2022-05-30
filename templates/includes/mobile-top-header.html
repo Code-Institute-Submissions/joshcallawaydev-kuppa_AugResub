@@ -1,6 +1,6 @@
 <ul class="nav-flex m-0">
     <li class="list-inline-item">
-        <a class="text-brown nav-link d-block d-lg-none" href="{% url 'home' %}" aria-expanded="false">
+        <a class="text-brown nav-link d-block d-lg-none p-1" href="{% url 'home' %}" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fa-solid fa-house"></i></div>
                 <p class="my-0 nav-text">Home</p>
@@ -8,7 +8,7 @@
         </a>
     </li>
     <li class="list-inline-item">
-        <a class="text-brown nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+        <a class="text-brown nav-link d-block d-lg-none p-1" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-search"></i></div>
@@ -33,7 +33,7 @@
         </div>
     </li>
     <li class="list-inline-item dropdown">
-        <a class="text-brown nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        <a class="text-brown nav-link d-block d-lg-none p-1" href="#" id="user-options" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user"></i></div>
@@ -55,7 +55,7 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-brown font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+        <a class="{% if grand_total %}text-brown font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none p-1"
             href="{% url 'view_basket' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag"></i></div>
