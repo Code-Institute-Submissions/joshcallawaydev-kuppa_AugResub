@@ -144,7 +144,13 @@ TBA - ![text](./link)
 - Q
 - Lower
 
+See requirements.txt for imports and versions
+
 ## Testing
+
+Stripe testing was performed in trst dev mode. For card detials please see the documentation using the link below
+
+[Stripe Docs](https://stripe.com/docs/testing)
 
 ## Deployment
 
