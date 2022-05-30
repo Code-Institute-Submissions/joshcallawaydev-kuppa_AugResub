@@ -85,6 +85,23 @@ This is for demonstation purposes only and will be used for my final Code Instit
 
 - The live site keeps to a minimalistic ethos and colour scheme allowing cusotmers to feel connected to the brand, keeping confusion and complexity away. All functionality leads to products and then to basket and checkout, always allowing customers the option to sign up or sign in to drive more business to KUPPA.
 
+1) Index
+![Index](./README/images/mobile_1.png)
+2) Products
+![Products](./README/images/mobile_6.png)
+3) Product Details
+![Product Details](./README/images/mobile_7.png)
+4) Checkout
+![Checkout](./README/images/mobile_8.png)
+5) Account
+![Account](./README/images/mobile_9.png)
+6) Product Management
+![Product Management](./README/images/mobile_10.png)
+
+See readme > images for more images of design
+
+[README Images](https://github.com/joshcallawaydev/kuppa/tree/main/README/images)
+
 ### Color scheme
 
 The color scheme was chosen to match that of the ecommerce platforms main seller - coffee.
@@ -109,22 +126,34 @@ I chose REM as the primary unit due to its flexability with responsive design. I
 
 PLEASE NOTE I DO NOT OWN THE RIGHTS TO THESE IMAGES AND THEY ARE USED FOR DEMONSTRATION PURPOSES ONLY.
 
-Original images were taken from the internet and all links can be found below.
+Original images were taken from the online resources and some links can be found below.
 
-Some images were updated in canva to show the KUPPA logo. Again this is for demo purposes only and would not be used in a real site.
+Some images were updated in canva to show the KUPPA logo. Again this is for demo purposes only and would not be used in a real site or for monetary gain.
 
 With more time i would add further images to differentiate the products.
 
-[Main KUPPA product image](https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg)
-[Reuable cup image](https://cdn.shopify.com/s/files/1/0196/2708/1828/products/Nought_bamboo_reusable_coffee_cup_with_lid_900x.jpg?v=1566416632)
-[Glass image](https://cdn.shopify.com/s/files/1/0051/0417/3144/products/12oz_KeepCup_brew_glass_1500x.jpg?v=1643387103)
-[SAge Barista Touch image](https://www.sageappliances.com/content/dam/sage/uk/assets/espresso/finished-goods/bes880/ses880bss2guk1/images/pdp0.jpg.transform/breville-lrg/image.jpg)
-
 ### UI / Mockups
 
-See readme > images for detailed list of design / Mockups
+![Main KUPPA product image](https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg)
+![Reuable cup image](https://cdn.shopify.com/s/files/1/0196/2708/1828/products/Nought_bamboo_reusable_coffee_cup_with_lid_900x.jpg?v=1566416632)
+![Glass image](https://cdn.shopify.com/s/files/1/0051/0417/3144/products/12oz_KeepCup_brew_glass_1500x.jpg?v=1643387103)
+![SAge Barista Touch image](https://www.sageappliances.com/content/dam/sage/uk/assets/espresso/finished-goods/bes880/ses880bss2guk1/images/pdp0.jpg.transform/breville-lrg/image.jpg)
 
-[README Images](https://github.com/joshcallawaydev/kuppa/tree/main/README/images)
+All Index/Home page images were taken from unsplash.
+
+1) https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jakub-dziubak-XtUd5SiX464-unsplash.jpg
+
+2) https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=fahmi-fakhrudin-nzyzAUsbV0M-unsplash.jpg
+
+3) https://images.unsplash.com/photo-1559496417-e7f25cb247f3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jarek-ceborski-IhqDpFz7I8Q-unsplash.jpg
+
+4) https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jeremy-yap-jn-HaGWe4yw-unsplash.jpg
+
+5) https://images.unsplash.com/photo-1592663527359-cf6642f54cff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=tabitha-turner-F0Wd4djYvSA-unsplash.jpg
+
+6) https://images.unsplash.com/photo-1610632380989-680fe40816c6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ante-samarzija-lsmu0rUhUOk-unsplash.jpg
+
+7) https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jessica-lewis-Am2kjOEKADs-unsplash.jpg
 
 ## Technology
 
@@ -204,7 +233,7 @@ Stripe testing was performed in trst dev mode. For card detials please see the d
 
 ## Deployment
 
-[Deployment folder](https://github.com/joshcallawaydev/kuppa/tree/main/README/images)
+[Deployment folder](https://github.com/joshcallawaydev/kuppa/tree/main/README/DEPLOYMENT.md)
 
 ## Credit
 
