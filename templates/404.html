@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row text-center">
+    <div class="col-12">
+        <h2 class="">Sorry, something seems to have gone wrong!</h2>
+        <p class="">Let's return you to the home page.</p>
+        <a class="btn btn-kuppa text-decoration-none text-uppercase ml-5" href="{% url 'home' %}">Home</a>
+    </div>
+</div>
+
+{% endblock %}
