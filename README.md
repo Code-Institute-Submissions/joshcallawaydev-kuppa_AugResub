@@ -269,3 +269,4 @@ ZIP/POST - 242442
 2) update the inbuilt django widgets to more customizable look and feel
 3) option to add favourites
 4) social media logins
+5) add more to terms of service and privacy policy
