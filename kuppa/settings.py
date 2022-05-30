@@ -54,10 +54,6 @@ INSTALLED_APPS = [
     'checkout',
     'accounts',
     'storages',
-    # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.instagram',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -122,7 +118,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'kuppa.wsgi.application'
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+#ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -204,7 +200,6 @@ if 'USE_AWS' in os.environ:
     MEDIAFILES_LOCATION = 'media'
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-    # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # variables

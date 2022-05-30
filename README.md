@@ -268,3 +268,4 @@ ZIP/POST - 242442
 1) add option for changing coffee bag sizes
 2) update the inbuilt django widgets to more customizable look and feel
 3) option to add favourites
+4) social media logins
