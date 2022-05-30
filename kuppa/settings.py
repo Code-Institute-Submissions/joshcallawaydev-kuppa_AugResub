@@ -29,6 +29,10 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
+TEMPLATE_DIRS = (
+    'C:/Users/Me/Django/kuppa/templates',
+)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = False

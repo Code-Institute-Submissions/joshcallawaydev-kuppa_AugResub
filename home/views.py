@@ -23,3 +23,9 @@ def terms_of_server(request):
 def privacy_policy(request):
     """link to privacy policy"""
     return render(request, 'home/privacy_policy.html')
+
+
+def error_404_view(request, exception):
+    """ error 404 """
+
+    return render(request, '404.html')
