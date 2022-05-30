@@ -197,3 +197,5 @@ Form name field
 Leaving name field blank on populated form to add level of checking to customer
 Securuty / Authentication
 ![Securuty / Authentication](./images/test_images/security.png)
+
+With more time i would like to have used automated testing more. The testing was thorough but more automated testing would be better for robustness.
