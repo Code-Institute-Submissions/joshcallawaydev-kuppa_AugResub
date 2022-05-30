@@ -21,13 +21,6 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 btn-box justify-content-around">
-            <!-- <a class="btn btn-outline-secondary" href="{% url 'products' %}" role="button">All Products</a>
-            <a class="btn btn-outline-secondary" href="{% url 'products' %}?category=blends,guatemala,costa_rica"
-                role="button">Coffee</a>
-            <a class="btn btn-outline-secondary" href="{% url 'products' %}?category=cups,machines"
-                role="button">Accessories</a>
-            <a class="btn btn-outline-secondary" href="{% url 'products' %}?category=new_arrivals,great_deals"
-                role="button">Offers</a> -->
             {% for cat in categories %}
             <a href="{% url 'products' %}?category={{ cat.name }}" class="btn btn-outline-secondary mt-2"
                 role="button">{{ cat.friendly_name }}</a>

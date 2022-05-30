@@ -43,6 +43,7 @@ This is for demonstation purposes only and will be used for my final Code Instit
 - Sort products by price
 - Sort products by Name
 - Sort products by Category
+- Sort products by Rating
 - See a visual aid that my payment is in process
 
 ### 3. Frequent user - as a frequent user i would like to
@@ -227,9 +228,7 @@ See requirements.txt for imports and versions
 
 ## Testing
 
-Stripe testing was performed in trst dev mode. For card detials please see the documentation using the link below
-
-[Stripe Docs](https://stripe.com/docs/testing)
+Stripe testing was performed in stripe developer mode. For card details, please see below andd the documentation using the link below
 
 ## Deployment
 
@@ -239,5 +238,25 @@ Stripe testing was performed in trst dev mode. For card detials please see the d
 
 ## Features
 
+Payments
+
+Payment integration was added with Stripe.com
+
+I used stripe for its ease of use. With just a few copy and paste code snippets, and setting up STRIPE_PUBLIC and PRIVATE keys you can have a fully functional payment system.
+
+WEBHOOKS were set up using the WEBHOOK URL and KEYS but further development on this would be needed for a publishable ecommerce platform.
+
+For test payments please use:
+
+Card - 4242 4242 4242 4242
+Exp - 0424
+CSV 424
+ZIP/POST - 242442
+
+[Stripe Docs](https://stripe.com/docs/testing)
+
+## Future Features
+
 1) add option for changing coffee bag sizes
 2) update the inbuilt django widgets to more customizable look and feel
+3) option to add favourites
