@@ -4,13 +4,13 @@ from .models import Order, OrderItem
 
 
 class OrderItemAdminInline(admin.TabularInline):
-    """class docstring """
+    """order item class"""
     model = OrderItem
     readonly_fields = ('order_item_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
-    """order admin doc string"""
+    """order admin class"""
 
     ordering = ('-date',)
 

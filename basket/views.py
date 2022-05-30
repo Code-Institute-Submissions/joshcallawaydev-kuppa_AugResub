@@ -17,7 +17,7 @@ def view_basket(request):
 
 
 def add_to_basket(request, item_id):
-    """Addaquantity of the specified product to the shopping bag"""
+    """Add  product to the shopping basket"""
 
     redirect_url = request.POST.get('redirect_url')
     item = get_object_or_404(Product, pk=item_id)

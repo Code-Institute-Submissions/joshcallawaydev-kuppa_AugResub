@@ -1,14 +1,12 @@
 """
-admin module
+products admin module
 """
 from django.contrib import admin
 from .models import Product, Category
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    """
-    docstring
-    """
+    """ set category name options in admin"""
     list_display = (
         'name',
         'friendly_name',
@@ -16,9 +14,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    """
-    docstring
-    """
+    """set product metrics for admin"""
     list_display = (
         'name',
         'category',

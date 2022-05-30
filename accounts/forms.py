@@ -4,14 +4,14 @@ from .models import UserAccount
 
 
 class UserAccountForm(forms.ModelForm):
-    """ user account class form data """
+    """ user account form class """
     class Meta:
-        """ class docstring """
+        """ meta class """
         model = UserAccount
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        """ init method docstring """
+
         super().__init__(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',

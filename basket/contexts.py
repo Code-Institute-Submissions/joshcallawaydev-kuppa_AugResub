@@ -6,7 +6,7 @@ from products.models import Product
 
 
 def basket_contents(request):
-    """Context func"""
+    """populate basket context function"""
 
     basket_items = []
     product_count = 0

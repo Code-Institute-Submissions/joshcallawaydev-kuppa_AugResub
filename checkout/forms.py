@@ -1,12 +1,11 @@
-""" doc string """
+""" checkout forms """
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
-    """ docstring """
+    """ Order form class """
     class Meta:
-        """ docstring """
         model = Order
         fields = ('email', 'full_name', 'phone_number',
                   'address_line_one', 'address_line_two',
@@ -14,7 +13,6 @@ class OrderForm(forms.ModelForm):
                   'country',)
 
     def __init__(self, *args, **kwargs):
-        """docstring"""
         super().__init__(*args, **kwargs)
         placeholders = {
             'email': 'Email Address',

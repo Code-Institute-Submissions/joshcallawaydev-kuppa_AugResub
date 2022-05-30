@@ -31,4 +31,3 @@ def create_or_update_user_account(sender, instance, created, **kwargs):
     """create user profile if needed"""
     if created:
         UserAccount.objects.create(user=instance)
-        # instance.UserAccount.save()

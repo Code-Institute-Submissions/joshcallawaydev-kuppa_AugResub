@@ -1,4 +1,4 @@
-"""product for view"""
+"""product forms module"""
 from django import forms
 from .models import Category, Product
 
@@ -6,12 +6,10 @@ from .models import Category, Product
 class ProductForm(forms.ModelForm):
     """ a product form """
     class Meta:
-        """another docstring"""
         model = Product
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):
-        """init method"""
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]

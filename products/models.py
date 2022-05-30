@@ -1,5 +1,5 @@
 """
-Models docstring
+product models module
 """
 from django.db import models
 
@@ -10,9 +10,6 @@ class Category(models.Model):
     """
 
     class Meta:
-        """
-        docstring
-        """
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=250)

@@ -1,12 +1,11 @@
-""" doc string """
+""" checkout apps """
 from django.apps import AppConfig
 
 
 class CheckoutConfig(AppConfig):
-    """ doc string """
+    """ Checkout config """
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'checkout'
 
     def ready(self):
-        """ doc string """
         import checkout.signals
