@@ -44,7 +44,7 @@
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-            <a href="https://kuppa-app.herokuapp.com/admin/" target="_blank">Admin Dashboard</a>
+            <a href="https://kuppa-app.herokuapp.com/admin/" class="dropdown-item" target="_blank">Admin</a>
             {% endif %}
             <a href="{% url 'account' %}" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
