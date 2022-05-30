@@ -101,7 +101,9 @@ Lighthouse
 Cross browser
 LINK
 Responsiveness
-LINK
+![Responsive testing](./images/test_images/responsive.png)
+![Responsive testing](./images/test_images/responsive2.png)
+Some issues at small screen sizes on the add product page however this i am happy with as these features, including admin dashboard would be mainly desktop use i believe. - I have sliced text to fix this issue partially.
 
 # Validators
 
@@ -125,32 +127,22 @@ Please note this pages is not finished but were added to imporve the sites valid
 Warning all related to jinja templating as per all other pages
 ![edit products html](./images/test_images/edit_productshtml.png)
 ![products details html](./images/test_images/product_deetshtml.png)
-
+![main nav html](./images/test_images/mainnav.png)
+![mobile top html](./images/test_images/mobiletop.png)
+![base html](./images/test_images/base.png)
 
 CSS
 
-JSHINT
+![Checkout css](./images/test_images/checkoutcss.png)
+![base css](./images/test_images/basecss.png)
 
-JSON
+JS - beautifytools
 
-Black (Python)
+![JS testing](./images/test_images/jstest.png)
 
-### Other Images
+Python
 
-Favicon wouldnt load
-![No Favicon](./images/test_images/favicon.png)
-Images Wouldnt Render
-![No Images Rendering](./images/test_images/norender.png)
-Search bar issue
-![Search issues](./images/test_images/image_7.png)
-Testing the buttons
-![Button and network tab](./images/test_images/image_18.png)
-Testing the links
-![Links and network tab](./images/test_images/image_19.png)
-Testing the links
-![Testing basket as anonamous user and logged in user](./images/test_images/image_20.png)
-
-# other
+All python has been fomratted with Black, Autopep8 and Pylance to ensure PEP8 standard where possible.
 
 ### Navigation
 
@@ -184,3 +176,18 @@ All account functionality and links tested
 All product management tested
 ![Delete product](./images/test_images/image_29.png)
 ![Edit / Add product](./images/test_images/image_30.png)
+
+### Other Images
+
+Favicon wouldnt load
+![No Favicon](./images/test_images/favicon.png)
+Images Wouldnt Render
+![No Images Rendering](./images/test_images/norender.png)
+Search bar issue
+![Search issues](./images/test_images/image_7.png)
+Testing the buttons
+![Button and network tab](./images/test_images/image_18.png)
+Testing the links
+![Links and network tab](./images/test_images/image_19.png)
+Testing the links
+![Testing basket as anonamous user and logged in user](./images/test_images/image_20.png)

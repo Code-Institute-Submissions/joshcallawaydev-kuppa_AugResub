@@ -29,14 +29,14 @@
                 </div>
             </form>
         </div>
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6">
             <h5 class="my-4 text-center">Available products</h5>
             <table class="table text-left">
                 <thead>
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Name</th>
-                        <th scope="col">Category</th>
+                        <th scope="col">Cat</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -54,7 +54,7 @@
                             </div>
                         </th>
                         <td class="align-items-center">{{ item.name }}</td>
-                        <td>{{ item.category.friendly_name }}</td>
+                        <td>{{ item.category.friendly_name|slice:":5" }}</td>
                         <td><a class="btn btn-kuppa text-decoration-none text-uppercase"
                                 href="{% url 'edit_product' item.id %}">Edit</a></td>
                         <td><a class="text-brown" href="{% url 'delete_product' item.id %}"><i
