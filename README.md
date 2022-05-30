@@ -236,7 +236,15 @@ Stripe testing was performed in stripe developer mode. For card details, please 
 
 ## Credit
 
+Payment func was supported by the Booutique Ado project alongside the code snippets in the Stripe Documentation.
+
 ## Features
+
+Database / Schema
+
+Visual representation of db in link below
+
+[database](https://github.com/joshcallawaydev/kuppa/blob/main/db.json)
 
 Payments
 

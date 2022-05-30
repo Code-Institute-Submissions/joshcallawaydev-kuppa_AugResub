@@ -82,8 +82,8 @@ def checkout(request):
             return redirect(reverse('checkout_complete',
                                     args=[order.order_number]))
         else:
-            messages.error(request, ('There was an error with your form. '
-                                     'Please double check your information.'))
+            messages.error(request, ('There was an error. '
+                                     'Please retry.'))
     else:
         basket = request.session.get('basket', {})
         if not basket:
