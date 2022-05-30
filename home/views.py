@@ -1,11 +1,18 @@
 """A module to build the views"""
 from django.shortcuts import render
+from django.conf import settings
 
 
 def index(request):
     """A view to return the index page"""
 
-    return render(request, 'home/index.html')
+    media_url = settings.MEDIA_URL
+
+    context = {
+        'media_url': media_url
+    }
+
+    return render(request, 'home/index.html', context)
 
 
 def terms_of_server(request):
