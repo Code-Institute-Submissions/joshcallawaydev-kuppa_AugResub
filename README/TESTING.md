@@ -116,14 +116,15 @@ All pages tested and only jinja templating returning bad values.
 ![checkout_complete.html](./images/test_images/checkout_completehtml.png)
 ![index.html](./images/test_images/indexhtml.png)
 It states to use H2-H6 tags however i have a good use of H1, H3 and H4 tags in this document. It is also worth noting that its an extention of the base template which too has its own headers which this validator will not be factoring.
-![privacy.html](./images/test_images/privacyhtml.png)
+![privacy html](./images/test_images/privacyhtml.png)
 Please note this pages is not finished but were added to imporve the sites validity.
-![terms.html](./images/test_images/termshtml.png)
+![terms html](./images/test_images/termshtml.png)
 Please note this pages is not finished but were added to imporve the sites validity.
-![add_products.html](./images/test_images/add_productshtml.png)
-![all_products.html](./images/test_images/all_productshtml.png)
+![add products pagehtml](./images/test_images/add_productshtml.png)
+![all products html](./images/test_images/all_productshtml.png)
 Warning all related to jinja templating as per all other pages
-
+![edit products html](./images/test_images/edit_productshtml.png)
+![products details html](./images/test_images/product_deetshtml.png)
 
 
 CSS
