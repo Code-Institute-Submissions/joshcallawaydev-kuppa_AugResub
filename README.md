@@ -25,8 +25,10 @@ This is for demonstation purposes only and will be used for my final Code Instit
 
 ### 1. First time user - as a first time user i would like to
 
-- understand what the site sells
-- easily navigate the site
+- Understand what the site sells
+- Easily navigate to products
+- Easily see details for a specific product
+- See clear calls to action
 - See products for sale
 - See some visuals to intise me in
 - Easily searh for products
@@ -34,19 +36,54 @@ This is for demonstation purposes only and will be used for my final Code Instit
 ### 2. Returning user - as a returning user i would like to
 
 - Sign up / Register for easy purchasing
+- Easily log in
 - Have access to my account page
 - See the brand contact details
 - See the brands socials
+- Sort products by price
+- Sort products by Name
+- Sort products by Category
+- See a visual aid that my payment is in process
 
 ### 3. Frequent user - as a frequent user i would like to
 
 - See my previous orders
 - Delete my account
 - Update my profile imformation
-- IF ADMIN, have access to add / remove products
-- IF ADMIN, have access to all orders and admin panel
+- Have my order info pre-populated
+- IF ADMIN, have access to add products
+- IF ADMIN, have access to edit products
+- IF ADMIN, have access to remove products
+- IF ADMIN, have access to all orders
+- IF ADMIN, have access to an admin panel
 
 ## Design
+
+### Strategy
+
+- The site stratigy was to build a product that was free of clutter, leaving customers with an easy to access and easy to understand ecommerce platform for buying coffee and coffee related accessories.
+
+### Scope
+
+- The scope (apps) of the project where as follows
+
+1) Home
+2) Products
+3) Basket
+4) Checkout
+5) Accounts
+
+### Structure
+
+- The structure of the ecommerce platform allows customer to easily navigate the site from products to understanding more about the business and its goals. Customers can also easily sign up and save their details making the process as easy and seamless as possible
+
+### Skeleton
+
+- All site functionality is linked around a user and their profile. Customers can buy without signing up but have more functionality and information once they are signed up. All products are grouped by category making it easy for customers to understand their options.
+
+### Surface
+
+- The live site keeps to a minimalistic ethos and colour scheme allowing cusotmers to feel connected to the brand, keeping confusion and complexity away. All functionality leads to products and then to basket and checkout, always allowing customers the option to sign up or sign in to drive more business to KUPPA.
 
 ### Color scheme
 
@@ -70,11 +107,24 @@ I chose REM as the primary unit due to its flexability with responsive design. I
 
 ### Imagery
 
-TBA
+PLEASE NOTE I DO NOT OWN THE RIGHTS TO THESE IMAGES AND THEY ARE USED FOR DEMONSTRATION PURPOSES ONLY.
+
+Original images were taken from the internet and all links can be found below.
+
+Some images were updated in canva to show the KUPPA logo. Again this is for demo purposes only and would not be used in a real site.
+
+With more time i would add further images to differentiate the products.
+
+[Main KUPPA product image](https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg)
+[Reuable cup image](https://cdn.shopify.com/s/files/1/0196/2708/1828/products/Nought_bamboo_reusable_coffee_cup_with_lid_900x.jpg?v=1566416632)
+[Glass image](https://cdn.shopify.com/s/files/1/0051/0417/3144/products/12oz_KeepCup_brew_glass_1500x.jpg?v=1643387103)
+[SAge Barista Touch image](https://www.sageappliances.com/content/dam/sage/uk/assets/espresso/finished-goods/bes880/ses880bss2guk1/images/pdp0.jpg.transform/breville-lrg/image.jpg)
 
 ### UI / Mockups
 
-TBA - ![text](./link)
+See readme > images for detailed list of design / Mockups
+
+[README Images](https://github.com/joshcallawaydev/kuppa/tree/main/README/images)
 
 ## Technology
 
@@ -153,6 +203,8 @@ Stripe testing was performed in trst dev mode. For card detials please see the d
 [Stripe Docs](https://stripe.com/docs/testing)
 
 ## Deployment
+
+[Deployment folder](https://github.com/joshcallawaydev/kuppa/tree/main/README/images)
 
 ## Credit
 
