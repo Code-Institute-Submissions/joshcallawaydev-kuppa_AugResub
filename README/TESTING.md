@@ -199,5 +199,8 @@ Securuty / Authentication
 ![Securuty / Authentication](./images/test_images/security.png)
 Permissions
 ![Permissions](./images/test_images/permissions.png)
+More mobile tests
+![Mobile view](./images/test_images/mobile_test_1.jpeg)
+![Mobile view qty box issue](./images/test_images/mobile_test_2.jpeg)
 
 With more time i would like to have used automated testing more. The testing was thorough but more automated testing would be better for robustness.
