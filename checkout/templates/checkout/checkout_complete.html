@@ -27,13 +27,13 @@
             {% if account %}
             <p>This is a historical order. Dated {{ order.date }}</p>
             {% else %}
-            <p>A confirmation email will be sent to {{ order.email }}</p>
+            <p>Please see below for your order details.</p>
             {% endif %}
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
-            <p class="display-6">Order Details</p>
+            <p class="my-3 display-6">Order Details</p>
             <p class="">Total: £{{ order.grand_total }}</p>
             {% if account %}
             <p class="">Order #{{ order.order_number|truncatechars:8 }}</p>
