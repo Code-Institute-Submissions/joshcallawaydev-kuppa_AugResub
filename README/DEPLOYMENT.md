@@ -36,6 +36,10 @@ All static file and images are stored in AWS - Using the S3 bucket feature
 
 I used an AWS S3 bucket for its easy python integration and free tier usage.
 
+Bucket images
+![S3 Bucket](./images/test_images/bucket_1.png)
+![S3 Bucket raw objects](./images/test_images/bucket_2.png)
+
 # Fork / Cloning
 
 ## Forking
