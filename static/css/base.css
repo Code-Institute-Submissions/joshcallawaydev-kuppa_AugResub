@@ -158,6 +158,13 @@ body {
     margin-top: 2rem;
 }
 
+.favourite-link {
+    text-decoration: none;
+    color: black;
+    background-color: black;
+}
+
+
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {

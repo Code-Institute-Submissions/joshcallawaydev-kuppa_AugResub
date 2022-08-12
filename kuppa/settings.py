@@ -35,7 +35,7 @@ TEMPLATE_DIRS = (
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kuppa-app.herokuapp.com', 'localhost']
 

@@ -53,3 +53,13 @@ def order_history(request, order_number):
     }
 
     return render(request, "checkout/checkout_complete.html", context)
+
+
+# def favourite_list(request):
+#     """favourites that are saved"""
+#     favourites = Product.favourites.filter(favourites=request.user)
+#     context = {
+#         "favourites": favourites,
+#         "account": True,
+#     }
+#     return render(request, "account.html", context)
