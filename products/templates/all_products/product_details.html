@@ -37,8 +37,8 @@
 
             <div class="card-body pb-0">
                 <p class="mb-0">{{ product.name }}</p>
-                <a href="{% url 'favourite_add' product.id %}">
-                    <p class="mb-0"><i class="fas fa-heart" id="favIcon"></i></p>
+                <a class="fav_link" href="{% url 'favourite_add' product.id %}">
+                    <p class="fav_link mb-0"><i class="fas fa-heart fav_link" id="favIcon"></i></p>
                 </a>
             </div>
             <div class="card-footer bg-white text-left pt-0 border-0">
@@ -98,13 +98,15 @@
 
     let $favIconBool = false;
 
+    $("#favIcon").css('color', 'brown')
+
     $(document).on('click', 'i', function () {
 
         $favIconBool = !($favIconBool);
         if ($favIconBool == true) {
             $(this).css('color', 'red');
         } else {
-            $(this).css('color', 'black');
+            $(this).css('color', 'brown');
         }
         console.log($favIconBool);
         let color = $(this).css("background-color");

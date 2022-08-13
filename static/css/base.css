@@ -158,19 +158,6 @@ body {
     margin-top: 2rem;
 }
 
-.favourite-link {
-    text-decoration: none;
-    color: black;
-    background-color: black;
-}
-
-.name-heart-container {
-    display: flex;
-    flex-direction: row;
-    gap: 0.4rem;
-}
-
-
 /* ------- Media Queries ------- */
 
 @media (max-width: 991px) {
