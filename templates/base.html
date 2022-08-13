@@ -85,6 +85,7 @@
                                 target="_blank">Admin</a>
                             {% endif %}
                             <a href="{% url 'account' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'favourites' %}" class="dropdown-item">Favourites</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

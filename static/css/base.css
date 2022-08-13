@@ -164,6 +164,12 @@ body {
     background-color: black;
 }
 
+.name-heart-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
 
 /* ------- Media Queries ------- */
 

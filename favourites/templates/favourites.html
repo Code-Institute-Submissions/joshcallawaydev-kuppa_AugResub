@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 mb-3">
+    <div class="row">
+        <div class="col-12">
+            <h1>Favourites</h1>
+            <hr>
+        </div>
+        <div class="col-12 mt-4">
+            <p>Welcome to your favourites <strong>{{ user|title }}</strong></p>
+        </div>
+        <div class="col-12 mt-4">
+            <p>You have <strong>{{ user_favourites|length }}</strong> products in your favourites.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% for fav in user_favourites %}
+                <div class="card-footer bg-white text-left pt-0 border-0">
+                    <div class="row">
+                        <section class="col">
+                            <div class="col-12 col-md-6 offset-2 col-lg-4 offset-4 m-0">
+                                <div class="image-container my-5">
+                                    {% if fav.image %}
+                                    <a href="{{ fav.image.url }}" target="_blank">
+                                        <img class="img-fluid card-img-top" src="{{ fav.image.url }}"
+                                            alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="img-fluid card-img-top" src="{{ media_url }}noimage.png"
+                                            alt="{{ fav.name }}">
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <p class="mb-0">{{ product.name }}</p>
+                            <p class="lead text-left mb-0 font-weight-bold">£{{ fav.price }}</p>
+                            {% if fav.category.name %}
+                            <small class="text-muted"><i class="fa-solid fa-tag"></i>
+                                {{ fav.category.name }}</small>
+                            {% endif %}
+                            <p class="mt-4">{{ fav.description }}</p>
+                        </section>
+                        <hr />
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
