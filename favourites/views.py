@@ -1,6 +1,7 @@
 """ add to favourites view """
 from django.shortcuts import get_object_or_404, redirect, reverse, render
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.contrib.auth.models import User
 from products.models import Product
 
@@ -17,12 +18,12 @@ def favourite_add(request, product_id):
 
     if user in list(product.favourites.all()):
         product.favourites.remove(user)
+        messages.success(request, f'{product.name} removed from favourites')
         print('removed')
-        print(f'favorited this product: {product.favourites.all()}')
     else:
         product.favourites.add(user)
+        messages.success(request, f'{product.name} added to favourites')
         print('added')
-        print(f'favorited this product: {product.favourites.all()}')
 
     return redirect(reverse('product_details', args=[product.id]))
 
@@ -34,11 +35,11 @@ def favourites(request):
     user = User.objects.get(username=request.user)
     # get list of products
     products = Product.objects.all()
-    print(products)
+
     # filter products favourites with this user attached
     user_favourites = products.filter(favourites=user)
-    print(user_favourites)
 
+    # context to be passed to html
     context = {
         "user": user,
         "user_favourites": user_favourites
