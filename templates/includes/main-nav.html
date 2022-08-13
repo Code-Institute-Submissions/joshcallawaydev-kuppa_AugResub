@@ -49,5 +49,15 @@
                 <a href="{% url 'products' %}?category=new_arrivals,great_deals" class="dropdown-item">All Offers</a>
             </div>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Trending
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="trending-link">
+                <a href="{% url 'trending' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li>
     </ul>
 </div>
