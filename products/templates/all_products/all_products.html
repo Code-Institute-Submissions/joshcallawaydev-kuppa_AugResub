@@ -166,28 +166,5 @@
             window.location.replace(siteUrl);
         }
     })
-
-    $(document).on("click", "i", function () {
-        switch (this.id) {
-            case "favIcon":
-                // console.log("click")
-                break;
-                // add additional cases
-        }
-    });
-
-    let $favIconBool = false;
-
-    $(document).on('click', 'i', function () {
-
-        $favIconBool = !($favIconBool);
-        if ($favIconBool == true) {
-            $(this).css('color', 'red');
-        } else {
-            $(this).css('color', 'black');
-        }
-        console.log($favIconBool);
-        let color = $(this).css("background-color");
-    });
 </script>
 {% endblock %}
