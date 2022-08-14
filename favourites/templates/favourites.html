@@ -81,6 +81,30 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <p>Here at KUPPA, we are always interested in improving our offering. Please let us know what your
+                    favoutite product is, and we will do our best to find other products that fit your needs &#128515;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form class="my-5" action="{% url 'favourite_tracker' %}" method="POST" id="favourite-tracker-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded mt-2">
+                        <legend class="fieldset-label small w-auto">Form</legend>
+                        <!-- {{ form.user }}
+                        {{ form.favourite_product }}
+                        {{ form.favourite_category }}
+                        {{ form.order_frequency }} -->
+                        {{ form }}
+                    </fieldset>
+                    <button id="submit-button"
+                        class="btn btn-kuppa text-decoration-none text-uppercase mt-4">Add</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     {% endblock %}

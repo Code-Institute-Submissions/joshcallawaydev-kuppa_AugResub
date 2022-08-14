@@ -26,6 +26,3 @@ class ProductFavourite(models.Model):
 
     def __str__(self):
         return self.user.username
-
-    # def __str__(self):
-    #     return self.favourite_category.name
