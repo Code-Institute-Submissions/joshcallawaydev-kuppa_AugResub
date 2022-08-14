@@ -17,7 +17,7 @@ class Category(models.Model):
     name = models.CharField(max_length=250)
     friendly_name = models.CharField(max_length=250, null=True, blank=True)
 
-    def str_(self):
+    def __str__(self):
         """
         returns name from class
         """
@@ -48,6 +48,6 @@ class Product(models.Model):
     favourites = models.ManyToManyField(
         User, related_name="favourite", default=None, blank=True)
 
-    def _str_(self):
+    def __str__(self):
         """gets name from class"""
         return self.name
