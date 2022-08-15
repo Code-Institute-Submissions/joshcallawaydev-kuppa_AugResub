@@ -32,8 +32,8 @@
                             <div class="col-12 col-md-6 offset-2 col-lg-4 offset-4 m-0">
                                 <div class="image-container my-5">
                                     {% if fav.image %}
-                                    <a href="{{ fav.image.url }}" target="_blank">
-                                        <img class="img-fluid card-img-top" src="{{ fav.image.url }}"
+                                    <a href="{{ fav.image_url }}" target="_blank">
+                                        <img class="img-fluid card-img-top" src="{{ fav.image_url }}"
                                             alt="{{ product.name }}">
                                     </a>
                                     {% else %}
@@ -84,22 +84,23 @@
         <div class="row">
             <div class="col">
                 <p>Here at KUPPA, we are always interested in improving our offering. Please let us know what your
-                    favoutite product is, and we will do our best to find other products that fit your needs &#128515;
+                    favourite product is, and we will do our best to find other products that fit your needs &#128515;
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <form class="my-5" action="{% url 'favourite_tracker' %}" method="POST" id="favourite-tracker-form">
+                <form class="my-5 fav_form" action="{% url 'favourite_tracker' %}" method="POST"
+                    id="favourite-tracker-form">
                     {% csrf_token %}
-                    <fieldset class="rounded mt-2">
+                    {{ form|crispy }}
+                    <!-- <fieldset class="rounded mt-2">
                         <legend class="fieldset-label small w-auto">Form</legend>
-                        <!-- {{ form.user }}
+                        {{ form.user }}
                         {{ form.favourite_product }}
                         {{ form.favourite_category }}
-                        {{ form.order_frequency }} -->
-                        {{ form }}
-                    </fieldset>
+                        {{ form.order_frequency }}
+                    </fieldset> -->
                     <button id="submit-button"
                         class="btn btn-kuppa text-decoration-none text-uppercase mt-4">Add</button>
                 </form>
