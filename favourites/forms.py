@@ -10,7 +10,7 @@ class ProductFavouriteForm(forms.ModelForm):
         model = ProductFavourite
         fields = ('user', 'favourite_category', 'favourite_product',
                   'order_frequency',)
-        # exclude = None
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
 
@@ -25,5 +25,5 @@ class ProductFavouriteForm(forms.ModelForm):
         for field in self.fields:
             placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].widget.attrs['class'] = 'fav_form'
             self.fields[field].label = False

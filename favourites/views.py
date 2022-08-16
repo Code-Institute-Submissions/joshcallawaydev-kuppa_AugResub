@@ -1,12 +1,13 @@
 """ add to favourites view """
-from django.shortcuts import get_object_or_404, redirect, reverse, render
+from django.shortcuts import (get_object_or_404,
+                              redirect, reverse, render, HttpResponse)
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from accounts.models import UserAccount
 from products.models import Product
 from .forms import ProductFavouriteForm
+from .models import ProductFavourite
 
 
 @login_required
@@ -35,6 +36,8 @@ def favourite_add(request, product_id):
 def favourites(request):
     """ favourites list function """
 
+    media_url = settings.MEDIA_URL
+
     user = User.objects.get(username=request.user)
     # get list of products
     products = Product.objects.all()
@@ -42,41 +45,73 @@ def favourites(request):
     # filter products favourites with this user attached
     user_favourites = products.filter(favourites=user)
 
+    # form_data = ProductFavourite.objects.all()
+    # print(form_data)
+
+    # if form_data.exists():
+    #     ProductFavourite.objects.get()
+    # else:
+    #     if request.method == "POST":
+    #         # post form details, populated in the html
+    #         form = ProductFavouriteForm(request.POST, instance=form_data)
+    #         # check if the form is valid and accurate
+    #         if form.is_valid():
+    #             # save form
+    #             form.save()
+    #             messages.success(request, "Favourites updated")
+    #         else:
+    #             messages.error(request, "Failed to submit form")
+    #     else:
+    #         # generates form
+    #         form = ProductFavouriteForm(instance=form_data)
+
     # context to be passed to html
     context = {
         "user": user,
+        "media_url": media_url,
+        # "form": form,
+        # "form_data": form_data,
         "user_favourites": user_favourites
     }
 
     return render(request, "favourites.html", context)
 
 
-@login_required
-def favourite_tracker(request):
-    """ html form for tracking a customers favourite product """
+# @login_required
+# def favourite_tracker(request):
+#     """ html form for tracking a customers favourite product """
 
-    print("this is a test ********")
+#     print(" ******** this is a test ********")
 
-    media_url = settings.MEDIA_URL
-    account = get_object_or_404(UserAccount, user=request.user)
+#     media_url = settings.MEDIA_URL
+#     # account = get_object_or_404(ProductFavourite)
+#     account = ProductFavourite.objects.get()
 
-    if request.method == "POST":
-        form = ProductFavouriteForm(request.POST)
-        print("you are here")
-        if form.is_valid():
-            # save form
-            form.save()
-            messages.success(request, "Form submitted")
-        else:
-            messages.error(request, "Failed to submit form")
-    else:
-        # sets form details
-        form = ProductFavouriteForm()
-        print("you are actually here")
+#     try:
+#         if request.method == "POST":
+#             # post form details, populated in the html
+#             form = ProductFavouriteForm(request.POST, instance=account)
+#             print("you are here, in the of of the post request code")
+#             # check ofrm is valid and accurate
+#             if form.is_valid():
+#                 # save form
+#                 form.save()
+#                 messages.success(request, "Form submitted")
+#             else:
+#                 messages.error(request, "Failed to submit form")
+#         else:
+#             # generates form
+#             form = ProductFavouriteForm(instance=account)
+#             print("you are actually here, the else statement")
+#     except Exception as e:
+#         messages.error(
+#             request, f'{e} occured')
+#         return HttpResponse(status=500)
 
-    context = {
-        "media_url": media_url,
-        "form": form
-    }
+#     context = {
+#         "media_url": media_url,
+#         "account": account,
+#         "form": form,
+#     }
 
-    return redirect(reverse('products'), context)
+    # return render(request, "favourites.html", context)

@@ -136,6 +136,14 @@ body {
     margin: 1rem 1rem;
 }
 
+/* favourites section */
+
+.fav_form {
+    border: 3px solid #804102;
+    background-color: #fff;
+    color: #000;
+}
+
 /* all auth specific */
 
 .allauth-form-inner-content {

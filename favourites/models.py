@@ -22,7 +22,8 @@ class ProductFavourite(models.Model):
         Category, null=True, on_delete=models.SET_NULL)
     favourite_product = models.ForeignKey(
         Product, null=True, on_delete=models.SET_NULL)
-    order_frequency = models.IntegerField(choices=OrderFrequency.choices)
+    order_frequency = models.IntegerField(
+        choices=OrderFrequency.choices, null=True)
 
     def __str__(self):
         return self.user.username
