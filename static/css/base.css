@@ -139,9 +139,21 @@ body {
 /* favourites section */
 
 .fav_form {
-    border: 3px solid #804102;
+    border: 1px solid #804102;
+    padding: 10px;
     background-color: #fff;
     color: #000;
+}
+
+.fav_form {
+    border: 1px solid #804102;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+.fav_form label {
+    margin: 1rem 0;
 }
 
 /* all auth specific */
