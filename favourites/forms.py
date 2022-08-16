@@ -25,7 +25,9 @@ class ProductFavouriteForm(forms.ModelForm):
         }
 
         for field in self.fields:
-            placeholder = placeholders[field]
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'fav_form'
-            self.fields[field].label = False
