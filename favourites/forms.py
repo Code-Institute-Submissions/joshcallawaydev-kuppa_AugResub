@@ -14,7 +14,6 @@ class ProductFavouriteForm(forms.ModelForm):
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        # self.user = kwargs.pop("user")
 
         super().__init__(*args, **kwargs)
         placeholders = {
