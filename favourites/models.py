@@ -25,5 +25,5 @@ class ProductFavourite(models.Model):
     order_frequency = models.IntegerField(
         choices=OrderFrequency.choices, null=True)
 
-    def __str__(self):
-        return self.user.username
+    # def __str__(self):
+    #     return self.user.username

@@ -38,39 +38,37 @@ def favourites(request):
 
     media_url = settings.MEDIA_URL
 
-    user = User.objects.get(username=request.user)
+    username = User.objects.get(username=request.user)
+    user = username
     # get list of products
     products = Product.objects.all()
 
     # filter products favourites with this user attached
     user_favourites = products.filter(favourites=user)
 
-    # form_data = ProductFavourite.objects.all()
-    # print(form_data)
+    get_all = ProductFavourite.objects.all()
+    my_data = get_all.filter(user=username)
+    print(my_data)
 
-    # if form_data.exists():
-    #     ProductFavourite.objects.get()
-    # else:
-    #     if request.method == "POST":
-    #         # post form details, populated in the html
-    #         form = ProductFavouriteForm(request.POST, instance=form_data)
-    #         # check if the form is valid and accurate
-    #         if form.is_valid():
-    #             # save form
-    #             form.save()
-    #             messages.success(request, "Favourites updated")
-    #         else:
-    #             messages.error(request, "Failed to submit form")
-    #     else:
-    #         # generates form
-    #         form = ProductFavouriteForm(instance=form_data)
+    if my_data.count() > 0:
+        data = get_object_or_404(ProductFavourite, user=request.user)
+        if request.method == "POST":
+            form = ProductFavouriteForm(request.POST, instance=data)
+            if form.is_valid():
+                # save new form deets to profile
+                form.save()
+                messages.success(request, "Favourites updated successfully")
+        else:
+            # sets form details
+            form = ProductFavouriteForm(instance=data)
+    else:
+        form = ProductFavouriteForm()
 
     # context to be passed to html
     context = {
         "user": user,
         "media_url": media_url,
-        # "form": form,
-        # "form_data": form_data,
+        "form": form,
         "user_favourites": user_favourites
     }
 
