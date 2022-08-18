@@ -39,11 +39,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'products' %}?category=great_deals" class="dropdown-item">Great Deals</a>
                 <a href="{% url 'products' %}?category=new_arrivals,great_deals" class="dropdown-item">All Offers</a>
@@ -51,11 +51,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Trending
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="trending-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'trending' %}" class="dropdown-item">All Products</a>
             </div>
         </li>

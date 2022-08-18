@@ -119,27 +119,7 @@ Some issues at small screen sizes on the add product page however this I am happ
 
 HTML
 
-All pages tested and only jinja templating returning bad values.
-
-![account.html](./images/test_images/accounthtml.png)
-![basket.html](./images/test_images/baskethtml.png)
-![checkout.html](./images/test_images/checkouthtml.png)
-![checkout_complete.html](./images/test_images/checkout_completehtml.png)
-![checkout_complete.html](./images/test_images/checkout_completehtml.png)
-![index.html](./images/test_images/indexhtml.png)
-It states to use H2-H6 tags however I have a good use of H1, H3 and H4 tags in this document. It is also worth noting that its an extension of the base template which too has its own headers which this validator will not be factoring.
-![privacy html](./images/test_images/privacyhtml.png)
-Please note this pages is not finished but were added to improve the sites validity.
-![terms html](./images/test_images/termshtml.png)
-Please note this pages is not finished but were added to improve the sites validity.
-![add products pagehtml](./images/test_images/add_productshtml.png)
-![all products html](./images/test_images/all_productshtml.png)
-Warning all related to jinja templating as per all other pages
-![edit products html](./images/test_images/edit_productshtml.png)
-![products details html](./images/test_images/product_deetshtml.png)
-![main nav html](./images/test_images/mainnav.png)
-![mobile top html](./images/test_images/mobiletop.png)
-![base html](./images/test_images/base.png)
+All pages tested, errors removed and only some warning visible.
 
 CSS
 
