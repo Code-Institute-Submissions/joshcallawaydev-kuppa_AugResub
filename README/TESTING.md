@@ -36,6 +36,9 @@ See some visuals
 Easily search for products
 ![Search Bar](./images/test_images/image_8.png)
 
+See trending products
+![Trending products](./images/test_images/trending.png)
+
 ### 2. Returning user - as a returning user I would like to
 
 Sign up / Register for easy purchasing
@@ -93,6 +96,12 @@ IF ADMIN, have access to all orders
 
 IF ADMIN, have access to an admin panel
 ![Admin panel](./images/test_images/image_17.png)
+
+Add products to my favourites
+![Favourites Testing](./images/test_images/favourites.png)
+
+Set a favourite product, category and order frequency
+![Favourites Testing](./images/test_images/favourites_form.png)
 
 # Dev Tools Testing
 
