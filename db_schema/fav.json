@@ -1,0 +1,42 @@
+[
+{
+  "model": "favourites.productfavourite",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "favourite_category": 2,
+    "favourite_product": 1,
+    "order_frequency": 1
+  }
+},
+{
+  "model": "favourites.productfavourite",
+  "pk": 17,
+  "fields": {
+    "user": 4,
+    "favourite_category": 1,
+    "favourite_product": 1,
+    "order_frequency": 1
+  }
+},
+{
+  "model": "favourites.productfavourite",
+  "pk": 18,
+  "fields": {
+    "user": 5,
+    "favourite_category": 1,
+    "favourite_product": 1,
+    "order_frequency": 3
+  }
+},
+{
+  "model": "favourites.productfavourite",
+  "pk": 19,
+  "fields": {
+    "user": 7,
+    "favourite_category": 1,
+    "favourite_product": 1,
+    "order_frequency": 1
+  }
+}
+]

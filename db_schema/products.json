@@ -1,0 +1,248 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "blends",
+    "friendly_name": "Blends"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "guatemala",
+    "friendly_name": "Guatemala"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "costa_rica",
+    "friendly_name": "Costa Rica"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "cups",
+    "friendly_name": "Cups"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "machines",
+    "friendly_name": "Machines"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "new_arrivals",
+    "friendly_name": "New Arrivals"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "name": "great_deals",
+    "friendly_name": "Great Deals"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "sku": "pp001",
+    "name": "Callax",
+    "description": "Our signature blend. A full bodied medium roast with hints of milk chocolate and Hazelnut. Good both with or without milk. Not one to be ignored.",
+    "price": "20.99",
+    "category": 1,
+    "rating": "4.90",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product.png",
+    "favourites": [
+      6,
+      8
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "sku": "pp003",
+    "name": "Mayan",
+    "description": "Originating from Guatemala. This single origin is full bodied and bursting with flavour. Enjoy black for hints of Nougat and cocoa",
+    "price": "10.49",
+    "category": 2,
+    "rating": "4.60",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product.png",
+    "favourites": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "sku": "pp004",
+    "name": "Parque",
+    "description": "Originating from Guatemala. This single origin is a medium roast and full with flavour. Enjoy black for hints of tangerine and hazelnut or with milk for hints of cocoa. Delicious!",
+    "price": "9.99",
+    "category": 2,
+    "rating": "4.80",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product.png",
+    "favourites": [
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "sku": "pp005",
+    "name": "Jose",
+    "description": "Originating from Costa Rica. This single origin is a medium roast and full of flavour. Enjoy black for hints of zucchini or with milk for hints of cocoa and blackberry. Yum!",
+    "price": "10.99",
+    "category": 3,
+    "rating": "4.90",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "sku": "pp006",
+    "name": "Cartago",
+    "description": "Originating from Costa Rica. This single origin is a dark roast and packed with flavour. Enjoy black for hints of cocoa or with milk for hints of cocoa and vanilla.",
+    "price": "11.99",
+    "category": 3,
+    "rating": "4.70",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "sku": "pp010",
+    "name": "Reusable Cup (Bamboo)",
+    "description": "This is a bamboo cup certain to add value to your coffee experiance",
+    "price": "8.99",
+    "category": 4,
+    "rating": "4.20",
+    "image_url": "https://cdn.shopify.com/s/files/1/0196/2708/1828/products/Nought_bamboo_reusable_coffee_cup_with_lid_900x.jpg?v=1566416632",
+    "image": "bamboo_cup.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "sku": "pp011",
+    "name": "KeepCup Glass 12oz",
+    "description": "Reusable cup for all your coffee needs",
+    "price": "19.99",
+    "category": 4,
+    "rating": "4.30",
+    "image_url": "https://cdn.shopify.com/s/files/1/0578/3420/9434/products/ShopifyProductPicture_12_1200x1200.jpg?v=1642756734",
+    "image": "keep_cup.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "sku": "pp012",
+    "name": "Sage Barista Touch",
+    "description": "The all in one coffee machine for enthusiasts",
+    "price": "949.00",
+    "category": 5,
+    "rating": "4.00",
+    "image_url": "https://www.sageappliances.com/content/dam/sage/uk/assets/espresso/finished-goods/bes880/ses880bss2guk1/images/pdp0.jpg.transform/breville-lrg/image.jpg",
+    "image": "sagebaristatouch.png",
+    "favourites": [
+      1
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "sku": "123543221",
+    "name": "Zorba",
+    "description": "Zorba is awesomeeee",
+    "price": "12.99",
+    "category": 3,
+    "rating": "4.60",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product_4Ae4PsT.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "sku": "64124345246",
+    "name": "Dela",
+    "description": "Dela is a single origin and pumped full of goodness",
+    "price": "13.99",
+    "category": 3,
+    "rating": "4.40",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product_8H2RsWI.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "sku": "35636",
+    "name": "Zilla",
+    "description": "Zilla is a Blend",
+    "price": "13.49",
+    "category": 1,
+    "rating": "4.60",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product_C1C40ON.png",
+    "favourites": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "sku": "PP134212",
+    "name": "Zondarico",
+    "description": "A strong black with hints of Mint and cocoa",
+    "price": "15.00",
+    "category": 3,
+    "rating": "3.90",
+    "image_url": "https://ae01.alicdn.com/kf/HTB16FJ9KFXXXXX6XFXXq6xXFXXXy/20X30cm-Wholesale-StandUp-Blank-brown-Zipper-Kraft-bag-Candy-Coffee-Tea-gift-Kraft-paper-bag-with.jpg",
+    "image": "coffee_product_6Hu6uLR.png",
+    "favourites": []
+  }
+}
+]

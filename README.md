@@ -2,18 +2,11 @@
 
 KUPPA is a ecommerce store built with Django.
 
-This is for demonstation purposes only and will be used for my final Code Institute module. This is a public repo so forking and cloning is accepted. Alternatively if you have any suggestions for features and or bug fixes please contact me.
-
-## Additional notes
-
-1) Debug currently set to TRUE
-2) add social media login to installed apps via `https://django-allauth.readthedocs.io/en/latest/installation.html`
-3) Issue binding port - Authentication and Authorisation functionality - test once deployed
-4) do i need a csrf_token for my remove_item function in basket.html
+This is for demonstration purposes only and will be used for my final Code Institute module. This is a public repo so forking and cloning is accepted. Alternatively if you have any suggestions for features and or bug fixes please contact me.
 
 ## Table Of Contents
 
-- [User Experiance](#UX)
+- [User Experience](#UX)
 - [Design](#Design)
 - [Technology / Features](#Technology)
 - [Testing](#Testing)
@@ -23,17 +16,17 @@ This is for demonstation purposes only and will be used for my final Code Instit
 
 ## UX
 
-### 1. First time user - as a first time user i would like to
+### 1. First time user - as a first time user I would like to
 
 - Understand what the site sells
 - Easily navigate to products
 - Easily see details for a specific product
 - See clear calls to action
 - See products for sale
-- See some visuals to intise me in
-- Easily searh for products
+- See some visuals to entice me in
+- Easily search for products
 
-### 2. Returning user - as a returning user i would like to
+### 2. Returning user - as a returning user I would like to
 
 - Sign up / Register for easy purchasing
 - Easily log in
@@ -46,11 +39,11 @@ This is for demonstation purposes only and will be used for my final Code Instit
 - Sort products by Rating
 - See a visual aid that my payment is in process
 
-### 3. Frequent user - as a frequent user i would like to
+### 3. Frequent user - as a frequent user I would like to
 
 - See my previous orders
 - Delete my account
-- Update my profile imformation
+- Update my profile information
 - Have my order info pre-populated
 - IF ADMIN, have access to add products
 - IF ADMIN, have access to edit products
@@ -62,7 +55,7 @@ This is for demonstation purposes only and will be used for my final Code Instit
 
 ### Strategy
 
-- The site stratigy was to build a product that was free of clutter, leaving customers with an easy to access and easy to understand ecommerce platform for buying coffee and coffee related accessories.
+- The site strategy was to build a product that was free of clutter, leaving customers with an easy to access and easy to understand ecommerce platform for buying coffee and coffee related accessories.
 
 ### Scope
 
@@ -84,7 +77,7 @@ This is for demonstation purposes only and will be used for my final Code Instit
 
 ### Surface
 
-- The live site keeps to a minimalistic ethos and colour scheme allowing cusotmers to feel connected to the brand, keeping confusion and complexity away. All functionality leads to products and then to basket and checkout, always allowing customers the option to sign up or sign in to drive more business to KUPPA.
+- The live site keeps to a minimalistic ethos and colour scheme allowing customers to feel connected to the brand, keeping confusion and complexity away. All functionality leads to products and then to basket and checkout, always allowing customers the option to sign up or sign in to drive more business to KUPPA.
 
 1) Index
 ![Index](./README/images/mobile_1.png)
@@ -105,11 +98,11 @@ See readme > images for more images of design
 
 ### Color scheme
 
-The color scheme was chosen to match that of the ecommerce platforms main seller - coffee.
+The colour scheme was chosen to match that of the ecommerce platforms main seller - coffee.
 
 1) Main colour - #804102
 2) Secondary colour - #fff
-3) Tersery colour - #000
+3) Third colour - #000
 
 ### Typography
 
@@ -117,11 +110,11 @@ My primary font was taken from Google fonts (https://fonts.google.com/).
 
 1) Primary font - Poppins
 2) Secondary font - Helvetica
-3) Tersery font - sans-serif
+3) Third font - sans-serif
 
 ### Sizing
 
-I chose REM as the primary unit due to its flexability with responsive design. I have also used PX where necessary for absolute sizing.
+I chose REM as the primary unit due to its flexibility with responsive design. I have also used PX where necessary for absolute sizing.
 
 ### Imagery
 
@@ -129,9 +122,9 @@ PLEASE NOTE I DO NOT OWN THE RIGHTS TO THESE IMAGES AND THEY ARE USED FOR DEMONS
 
 Original images were taken from the online resources and some links can be found below.
 
-Some images were updated in canva to show the KUPPA logo. Again this is for demo purposes only and would not be used in a real site or for monetary gain.
+Some images were updated in Canva to show the KUPPA logo. Again, this is for demo purposes only and would not be used in a real site or for monetary gain.
 
-With more time i would add further images to differentiate the products.
+With more time I would add further images to differentiate the products.
 
 ### UI / Mockups
 
@@ -228,15 +221,21 @@ See requirements.txt for imports and versions
 
 ## Testing
 
-Stripe testing was performed in stripe developer mode. For card details, please see below andd the documentation using the link below
+See TESTING.md
+
+[Testing](https://github.com/joshcallawaydev/kuppa/blob/main/README/TESTING.md)
+
+Stripe testing was performed in stripe developer mode. For card details, please see stripe developer documentation.
 
 ## Deployment
+
+For deployment, see DEPLOYMENT.md via the link below.
 
 [Deployment folder](https://github.com/joshcallawaydev/kuppa/tree/main/README/DEPLOYMENT.md)
 
 ## Credit
 
-Payment func was supported by the Booutique Ado project alongside the code snippets in the Stripe Documentation.
+Payment functionality was supported by the Booutique Ado project alongside the code snippets in the Stripe Documentation.
 
 ## Features
 

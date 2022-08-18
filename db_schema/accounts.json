@@ -1,0 +1,86 @@
+[
+{
+  "model": "accounts.useraccount",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "default_phone_number": "02392 673705",
+    "default_address_line_one": "139 Tangier Road",
+    "default_address_line_two": "Copnor",
+    "default_city": "Portsmouth",
+    "default_county": "Hants",
+    "default_postcode": "PO3 6PD",
+    "default_country": "GB"
+  }
+},
+{
+  "model": "accounts.useraccount",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "default_phone_number": "02392673705",
+    "default_address_line_one": "139 Tangier Road",
+    "default_address_line_two": "Copnor",
+    "default_city": "Portsmouth",
+    "default_county": "Hants",
+    "default_postcode": "PO3 6PD",
+    "default_country": "GB"
+  }
+},
+{
+  "model": "accounts.useraccount",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "default_phone_number": "07850476884",
+    "default_address_line_one": "139 Tangier Road",
+    "default_address_line_two": "Copnor",
+    "default_city": "Portsmouth",
+    "default_county": "Hants",
+    "default_postcode": "PO3 6PD",
+    "default_country": "GB"
+  }
+},
+{
+  "model": "accounts.useraccount",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "default_phone_number": "02392673705",
+    "default_address_line_one": "139 Tangier Road",
+    "default_address_line_two": "Copnor",
+    "default_city": "Portsmouth",
+    "default_county": "Hampshire",
+    "default_postcode": "PO3 6PD",
+    "default_country": "GB"
+  }
+},
+{
+  "model": "accounts.useraccount",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "default_phone_number": "07850476884",
+    "default_address_line_one": "139 Tangier Road",
+    "default_address_line_two": "Copnor",
+    "default_city": "Portsmouth",
+    "default_county": "Hants",
+    "default_postcode": "PO3 6PD",
+    "default_country": "GB"
+  }
+},
+{
+  "model": "accounts.useraccount",
+  "pk": 8,
+  "fields": {
+    "user": 8,
+    "default_phone_number": null,
+    "default_address_line_one": null,
+    "default_address_line_two": null,
+    "default_city": null,
+    "default_county": null,
+    "default_postcode": null,
+    "default_country": null
+  }
+}
+]
