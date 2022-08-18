@@ -119,7 +119,11 @@ Some issues at small screen sizes on the add product page however this I am happ
 
 HTML
 
-All pages tested, errors removed and only some warning visible.
+All pages tested, errors removed and only warning visible. These based on templating mostly and placeholder from froms.
+
+Evidance
+![Validation evidance](./images/test_images/base_validation.png)
+![Validation evidance 2](./images/test_images/more_html_validation_evidance.png)
 
 CSS
 
