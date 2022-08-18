@@ -225,8 +225,6 @@ See TESTING.md
 
 [Testing](https://github.com/joshcallawaydev/kuppa/blob/main/README/TESTING.md)
 
-Stripe testing was performed in stripe developer mode. For card details, please see stripe developer documentation.
-
 ## Deployment
 
 For deployment, see DEPLOYMENT.md via the link below.
@@ -243,7 +241,9 @@ Database / Schema
 
 Visual representation of db in link below
 
-[database](https://github.com/joshcallawaydev/kuppa/blob/main/db.json)
+[database](https://github.com/joshcallawaydev/kuppa/tree/main/db_schema)
+
+Stripe testing was performed in stripe developer mode. For card details, please see stripe developer documentation or below in features.
 
 Payments
 
@@ -266,6 +266,6 @@ ZIP/POST - 242442
 
 1) add option for changing coffee bag sizes
 2) update the inbuilt django widgets to more customizable look and feel
-3) option to add favourites
 4) social media logins
 5) add more to terms of service and privacy policy
+6) Add feature for rating products by customer
