@@ -119,11 +119,14 @@ Some issues at small screen sizes on the add product page however this I am happ
 
 HTML
 
-All pages tested, errors removed and only warning visible. These based on templating mostly and placeholder from froms.
+All pages tested, errors removed and only warning visible due to bootstrap col etc.
 
 Evidance
 ![Validation evidance](./images/test_images/base_validation.png)
 ![Validation evidance 2](./images/test_images/more_html_validation_evidance.png)
+
+All forms now validating correctly and select elements correctly labelled with placeholders.
+![Validation placeholder issue](./images/test_images/placeholder_label_issue.png)
 
 CSS
 
