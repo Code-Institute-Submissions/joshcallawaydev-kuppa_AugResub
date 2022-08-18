@@ -25,6 +25,7 @@ This is for demonstration purposes only and will be used for my final Code Insti
 - See products for sale
 - See some visuals to entice me in
 - Easily search for products
+- See trending products
 
 ### 2. Returning user - as a returning user I would like to
 
@@ -50,6 +51,8 @@ This is for demonstration purposes only and will be used for my final Code Insti
 - IF ADMIN, have access to remove products
 - IF ADMIN, have access to all orders
 - IF ADMIN, have access to an admin panel
+- Add products to my favourites
+- Set a favourite product, category and order frequency
 
 ## Design
 
@@ -241,7 +244,7 @@ Database / Schema
 
 Visual representation of db in link below
 
-[database](https://github.com/joshcallawaydev/kuppa/tree/main/db_schema)
+[database](https://github.com/joshcallawaydev/kuppa/tree/main/README/db_schema)
 
 Stripe testing was performed in stripe developer mode. For card details, please see stripe developer documentation or below in features.
 
@@ -269,3 +272,4 @@ ZIP/POST - 242442
 4) social media logins
 5) add more to terms of service and privacy policy
 6) Add feature for rating products by customer
+7) build out trending products so it doesnt just take favourited products but also only shows then for a set time.

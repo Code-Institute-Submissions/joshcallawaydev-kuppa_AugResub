@@ -13,7 +13,7 @@ Below is the testing performed on this project. Testing was compiled throughout 
 
 # User stories
 
-### 1. First time user - as a first time user i would like to
+### 1. First time user - as a first-time user I would like to
 
 Understand what the site sells
 ![Understand what the site sells](./images/test_images/image_1.png)
@@ -36,7 +36,7 @@ See some visuals
 Easily search for products
 ![Search Bar](./images/test_images/image_8.png)
 
-### 2. Returning user - as a returning user i would like to
+### 2. Returning user - as a returning user I would like to
 
 Sign up / Register for easy purchasing
 ![Links to sign up](./images/test_images/image_9.png)
@@ -68,12 +68,12 @@ Sort products by Rating
 See a visual aid that my payment is in process
 ![Processing screen](./images/test_images/image_13.png)
 
-### 3. Frequent user - as a frequent user i would like to
+### 3. Frequent user - as a frequent user I would like to
 
 See my previous orders
 ![My account](./images/test_images/image_14.png)
 
-Update my profile imformation
+Update my profile information
 ![Account page](./images/test_images/image_14.png)
 
 Have my order info pre-populated
@@ -104,7 +104,7 @@ Firefox
 Responsiveness
 ![Responsive testing](./images/test_images/responsive.png)
 ![Responsive testing](./images/test_images/responsive2.png)
-Some issues at small screen sizes on the add product page however this i am happy with as these features, including admin dashboard would be mainly desktop use i believe. - I have sliced text to fix this issue partially.
+Some issues at small screen sizes on the add product page however this I am happy with as these features, including admin dashboard would be mainly desktop use I believe. - I have sliced text to fix this issue partially.
 
 # Validators
 
@@ -118,11 +118,11 @@ All pages tested and only jinja templating returning bad values.
 ![checkout_complete.html](./images/test_images/checkout_completehtml.png)
 ![checkout_complete.html](./images/test_images/checkout_completehtml.png)
 ![index.html](./images/test_images/indexhtml.png)
-It states to use H2-H6 tags however i have a good use of H1, H3 and H4 tags in this document. It is also worth noting that its an extention of the base template which too has its own headers which this validator will not be factoring.
+It states to use H2-H6 tags however I have a good use of H1, H3 and H4 tags in this document. It is also worth noting that its an extension of the base template which too has its own headers which this validator will not be factoring.
 ![privacy html](./images/test_images/privacyhtml.png)
-Please note this pages is not finished but were added to imporve the sites validity.
+Please note this pages is not finished but were added to improve the sites validity.
 ![terms html](./images/test_images/termshtml.png)
-Please note this pages is not finished but were added to imporve the sites validity.
+Please note this pages is not finished but were added to improve the sites validity.
 ![add products pagehtml](./images/test_images/add_productshtml.png)
 ![all products html](./images/test_images/all_productshtml.png)
 Warning all related to jinja templating as per all other pages
@@ -143,7 +143,7 @@ JS - beautifytools
 
 Python
 
-All python has been fomratted with Black, Autopep8 and Pylance to ensure PEP8 standard where possible.
+All python has been formatted with Black, Autopep8 and Pylance to ensure PEP8 standard where possible.
 
 ### Navigation
 
@@ -180,9 +180,9 @@ All product management tested
 
 ### Other Images
 
-Favicon wouldnt load
+Favicon would not load
 ![No Favicon](./images/test_images/favicon.png)
-Images Wouldnt Render
+Images would not Render
 ![No Images Rendering](./images/test_images/norender.png)
 Search bar issue
 ![Search issues](./images/test_images/image_7.png)
@@ -195,7 +195,7 @@ Testing the links
 Form name field
 ![Form name field](./images/test_images/formname.png)
 Leaving name field blank on populated form to add level of checking to customer
-Securuty / Authentication
+Security / Authentication
 ![Securuty / Authentication](./images/test_images/security.png)
 Permissions
 ![Permissions](./images/test_images/permissions.png)
@@ -203,4 +203,10 @@ More mobile tests
 ![Mobile view](./images/test_images/mobile_test_1.jpeg)
 ![Mobile view qty box issue](./images/test_images/mobile_test_2.jpeg)
 
-With more time i would like to have used automated testing more. The testing was thorough but more automated testing would be better for robustness.
+Favourites testing
+![Favourites Testing](./images/test_images/favourites.png)
+
+Trending products testing
+![Trending products Testing](./images/test_images/trending.png)
+
+With more time I would like to have used automated testing more. The testing was thorough but more automated testing would be better for robustness.
